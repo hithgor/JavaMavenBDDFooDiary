@@ -30,8 +30,9 @@ public class Hooks {
                 .addFormParam("password", "1234")
                 .setContentType(ContentType.URLENC).build();
         SessionFilter sessionFilter = new SessionFilter();
-        RequestSpecification res = given().spec(req).log().all().filter(sessionFilter);
-        Response response = res.when().post(endpointResource.getResource())
+
+        RequestSpecification req2 = given().spec(req).log().all().filter(sessionFilter);
+        Response response = req2.when().post(endpointResource.getResource())
                 .then().extract().response();
         String userSessionId = response.getCookie("sessionid");
 
@@ -43,9 +44,12 @@ public class Hooks {
         System.out.println("CSRFTOKEN saved: " + csrftoken);
         System.out.println("Session ID saved: " + userSessionId);
 
-        loginInData.setCsrfTokenFromSetup(csrftoken);
-        loginInData.setUserSessionIdFromSetup(userSessionId);
-        loginInData.setSessionFilterFromSetup(sessionFilter);
+        StepDefinition.csrfTokenFromSetup = csrftoken;
+        StepDefinition.userSessionIdFromSetup = userSessionId;
+        StepDefinition.sessionFilterFromSetup = sessionFilter;
+        StepDefinition.req = req;
+        StepDefinition.response = response;
+
 
 
 

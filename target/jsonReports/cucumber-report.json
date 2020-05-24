@@ -1,0 +1,247 @@
+[
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-24T20:18:11.122Z",
+        "before": [
+          {
+            "result": {
+              "duration": 1479000600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.beforeScenario()"
+            }
+          }
+        ],
+        "line": 8,
+        "name": "User created mealcards are assigned appropriate names",
+        "description": "",
+        "id": "mealcards;user-created-mealcards-are-assigned-appropriate-names",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4998200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Date created payload \"\\\"dateCreated\\\":\\\"2020-03-19\\\"\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"\\\"dateCreated\\\":\\\"2020-03-19\\\"\"",
+                  "offset": 21
+                }
+              ],
+              "location": "bddSteps.StepDefinition.establishBody(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 134999700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User calls \"GetMealcardsEndpoint\" with \"Post\" request",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"GetMealcardsEndpoint\"",
+                  "offset": 11
+                },
+                {
+                  "val": "\"Post\"",
+                  "offset": 39
+                }
+              ],
+              "location": "bddSteps.StepDefinition.sendPostWithEstablishedBody(java.lang.String,java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 531999400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Consecutive Mealcards are named approprietly",
+            "match": {
+              "location": "bddSteps.StepDefinition.checkMealcardNames()"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@loginRequired"
+          }
+        ]
+      }
+    ],
+    "name": "Mealcards",
+    "description": "",
+    "id": "mealcards",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/rest/mealcards.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-24T20:18:13.347Z",
+        "line": 6,
+        "name": "",
+        "description": "",
+        "id": "a-description;",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "something..",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "A description",
+    "description": "",
+    "id": "a-description",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/rest/plotting.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-24T20:18:13.358Z",
+        "line": 6,
+        "name": "Registered user cannot login without email confirmation",
+        "description": "",
+        "id": "userlogin;registered-user-cannot-login-without-email-confirmation",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 8,
+            "name": "something..",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "UserLogin",
+    "description": "",
+    "id": "userlogin",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/rest/userLogin.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-24T20:18:13.361Z",
+        "line": 6,
+        "name": "A scenario",
+        "description": "",
+        "id": "a-description;a-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "something..",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "A description",
+    "description": "",
+    "id": "a-description",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/selenium/mealcardsSelenium.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-24T20:18:13.365Z",
+        "line": 6,
+        "name": "A scenario",
+        "description": "",
+        "id": "a-description;a-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "something..",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "A description",
+    "description": "",
+    "id": "a-description",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/selenium/plottingSelenium.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-05-24T20:18:13.369Z",
+        "line": 6,
+        "name": "A scenario",
+        "description": "",
+        "id": "a-description;a-scenario",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "status": "undefined"
+            },
+            "line": 7,
+            "name": "something..",
+            "match": {},
+            "keyword": "Given "
+          }
+        ]
+      }
+    ],
+    "name": "A description",
+    "description": "",
+    "id": "a-description",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/selenium/userLoginSelenium.feature",
+    "tags": []
+  }
+]
