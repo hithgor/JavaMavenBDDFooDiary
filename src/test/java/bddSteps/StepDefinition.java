@@ -1,5 +1,6 @@
 package bddSteps;
 
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -58,7 +59,7 @@ public class StepDefinition extends Utils {
         this.sessionFilterFromSetup = sessionFilterFromSetup;
     }
 
-    @Given("Date created payload {string}")
+    @Given("Working payload {string}")
     public void establishBody(String dateCreated) throws IOException {
         /*//TEST CHECKING IF AUTOMATIC NAME-APPLYING to MEALS WORKS AS INTENDED
         0 - BREAKFAST, 1 - LUNCH, 2 - DINNER using pre-created mealCards on test account//*/
@@ -103,6 +104,33 @@ public class StepDefinition extends Utils {
         }
 
 
+    }
+
+    @Given("Valid mealcards payload")
+    public void validMealcardsPayload() throws IOException {
+        req = given().filter(sessionFilterFromSetup).baseUri(getGlobalValue("BASE_URL")).urlEncodingEnabled(true)
+                .log().all().contentType(ContentType.JSON).cookie("csrftoken", csrfTokenFromSetup)
+                .cookie("sessionid", userSessionIdFromSetup)
+                .header("X-CSRFToken", csrfTokenFromSetup)
+                .sessionId(userSessionIdFromSetup)
+                .body(TestDataPayloads.payloadMealcardCreation());
+    }
+
+    @Then("the API call got status code {int}")
+    public void theAPICallGotStatusCodeOK(int expectedStatusCode) {
+        Assert.assertEquals(response.getStatusCode(), expectedStatusCode);
+    }
+
+    @And("Verification by GetMealcardsEndpoint is successful")
+    public void verificationByGetRequestIsSuccessful() throws IOException {
+        establishBody("\"dateCreated\":\"2020-03-29\"");
+        sendPostWithEstablishedBody("GetMealcardsEndpoint", "Post");
+
+        JsonPath jspMealcardsData1 = new JsonPath(response.asString());
+        int mealcardsQuantity = jspMealcardsData1.getList("").size();
+        Assert.assertEquals(response.statusCode(),200);
+        Assert.assertEquals(mealcardsQuantity, 3);
+        Assert.assertEquals(jspMealcardsData1.getInt("[1].id"), 22222222);
     }
 
 }
