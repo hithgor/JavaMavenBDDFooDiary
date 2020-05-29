@@ -12,6 +12,8 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import utilities.APIEnum;
 import utilities.TestDataPayloads;
 import utilities.Utils;
@@ -33,6 +35,8 @@ public class StepDefinition extends Utils {
     static String place_id;
     static String csrfTokenFromSetup, userSessionIdFromSetup;
     static SessionFilter sessionFilterFromSetup;
+
+    static WebDriver driver;
 
 
     public  void setReqFromSetup(RequestSpecification req) {
@@ -121,16 +125,40 @@ public class StepDefinition extends Utils {
         Assert.assertEquals(response.getStatusCode(), expectedStatusCode);
     }
 
-    @And("Verification by GetMealcardsEndpoint is successful")
-    public void verificationByGetRequestIsSuccessful() throws IOException {
+    @And("Verification by GetMealcardsEndpoint with expectedQuantity={int}")
+    public void verificationByGetRequestIsSuccessful(int expectedQuantity) throws IOException {
         establishBody("\"dateCreated\":\"2020-03-29\"");
         sendPostWithEstablishedBody("GetMealcardsEndpoint", "Post");
 
         JsonPath jspMealcardsData1 = new JsonPath(response.asString());
         int mealcardsQuantity = jspMealcardsData1.getList("").size();
         Assert.assertEquals(response.statusCode(),200);
-        Assert.assertEquals(mealcardsQuantity, 3);
+        Assert.assertEquals(mealcardsQuantity, expectedQuantity);
         Assert.assertEquals(jspMealcardsData1.getInt("[1].id"), 22222222);
     }
 
+
+    @Given("User is on {string}")
+    public void userIsOn(String expectedPage) throws IOException {
+
+        APIEnum resourceAPI = APIEnum.valueOf(expectedPage);
+        String pathBuilder = getGlobalValue("BASE_URL") + resourceAPI.getResource();
+        driver.get(pathBuilder);
+
+    }
+
+    @When("User clicks on element XPATH {string}")
+    public void userClicksOnElement(String xpathToBeClicked) {
+
+        driver.findElement(By.xpath(xpathToBeClicked)).click();
+    }
+
+    @Then("Login form is displayed")
+    public void loginFormIsShown() {
+
+       Boolean loginForm =  driver.findElement(By.xpath("/html[1]/body[1]/div[1]/form[2]")).isDisplayed();
+       Assert.assertTrue(loginForm);
+       driver.close();
+       driver.quit();
+    }
 }

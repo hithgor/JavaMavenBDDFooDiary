@@ -18,11 +18,10 @@ Feature: Mealcards
     | \"dateCreated\":\"2020-03-21\" |
 
   @loginRequired
-  Scenario: User saves mealcards and can retrieve them
+  Scenario: User saves mealcards and retrieves them
 
     Given Valid mealcards payload
     When User calls "SaveMealcardsEndpoint" with "Post" request
     Then the API call got status code 302
-    And Verification by GetMealcardsEndpoint is successful
-
+    And Verification by GetMealcardsEndpoint with expectedQuantity=3
 

@@ -3,6 +3,9 @@
 
 Feature: UserLogin
 
-  Scenario: Registered user cannot login without email confirmation
+  @SeleniumSetUp
+  Scenario: User cannot pick a date without logging in
 
-    Given something..
+    Given User is on "CaloriestrackerPage"
+    When User clicks on element XPATH "/html[1]/body[1]/button[1]"
+    Then Login form is displayed

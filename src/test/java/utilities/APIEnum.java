@@ -4,7 +4,9 @@ public enum APIEnum {
 
     UserLoginEndpoint("api/user/login/"),
     GetMealcardsEndpoint("caloriestracker/getMealCards/"),
-    SaveMealcardsEndpoint("caloriestracker/postSaveMealCards/");
+    SaveMealcardsEndpoint("caloriestracker/postSaveMealCards/"),
+    CaloriestrackerPage("caloriestracker/");
+
     private String resource;
 
     APIEnum(String resource) {

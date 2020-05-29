@@ -4,4 +4,4 @@
 Feature: A description
 
   Scenario:
-    Given something..
+    Given

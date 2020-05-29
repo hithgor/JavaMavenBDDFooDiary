@@ -1,15 +1,18 @@
 package bddSteps;
 
+import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.filter.session.SessionFilter;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
+import org.openqa.selenium.chrome.ChromeDriver;
 import utilities.APIEnum;
 import utilities.Utils;
 
 import java.io.IOException;
+import java.util.concurrent.TimeUnit;
 
 import static io.restassured.RestAssured.given;
 
@@ -50,9 +53,17 @@ public class Hooks {
         StepDefinition.req = req;
         StepDefinition.response = response;
 
+    }
+    @Before("@SeleniumSetUp")
+    public void seleniumSetUp() {
+        System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+        StepDefinition.driver = new ChromeDriver();
+        StepDefinition.driver.manage().timeouts()
+                            .implicitlyWait(2, TimeUnit.SECONDS);
+    }
 
-
-
-
+    @After("@SeleniumSetUp")
+    public void seleniumTearDown() {
+        ///template
     }
 }
