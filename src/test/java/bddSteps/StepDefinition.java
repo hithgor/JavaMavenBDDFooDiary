@@ -13,7 +13,11 @@ import io.restassured.specification.RequestSpecification;
 import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.APIEnum;
 import utilities.TestDataPayloads;
 import utilities.Utils;
@@ -31,7 +35,7 @@ public class StepDefinition extends Utils {
     static ResponseSpecification resspec;
     static Response response;
 
-    TestDataPayloads payload =new TestDataPayloads();
+    TestDataPayloads payload = new TestDataPayloads();
     static String place_id;
     static String csrfTokenFromSetup, userSessionIdFromSetup;
     static SessionFilter sessionFilterFromSetup;
@@ -39,7 +43,7 @@ public class StepDefinition extends Utils {
     static WebDriver driver;
 
 
-    public  void setReqFromSetup(RequestSpecification req) {
+    public void setReqFromSetup(RequestSpecification req) {
         this.req = req;
     }
 
@@ -47,19 +51,19 @@ public class StepDefinition extends Utils {
         this.resspec = resspec;
     }
 
-    public  void setResponseFromSetup(Response response) {
+    public void setResponseFromSetup(Response response) {
         this.response = response;
     }
 
-    public  void setCsrfTokenFromSetup(String csrfTokenFromSetup) {
+    public void setCsrfTokenFromSetup(String csrfTokenFromSetup) {
         this.csrfTokenFromSetup = csrfTokenFromSetup;
     }
 
-    public  void setUserSessionIdFromSetup(String userSessionIdFromSetup) {
+    public void setUserSessionIdFromSetup(String userSessionIdFromSetup) {
         this.userSessionIdFromSetup = userSessionIdFromSetup;
     }
 
-    public  void setSessionFilterFromSetup(SessionFilter sessionFilterFromSetup) {
+    public void setSessionFilterFromSetup(SessionFilter sessionFilterFromSetup) {
         this.sessionFilterFromSetup = sessionFilterFromSetup;
     }
 
@@ -69,27 +73,27 @@ public class StepDefinition extends Utils {
         0 - BREAKFAST, 1 - LUNCH, 2 - DINNER using pre-created mealCards on test account//*/
         System.out.println("printing from given" + csrfTokenFromSetup);
 
-             req = given().filter(sessionFilterFromSetup).baseUri(getGlobalValue("BASE_URL")).urlEncodingEnabled(true)
+        req = given().filter(sessionFilterFromSetup).baseUri(getGlobalValue("BASE_URL")).urlEncodingEnabled(true)
                 .log().all().contentType(ContentType.JSON).cookie("csrftoken", csrfTokenFromSetup)
                 .cookie("sessionid", userSessionIdFromSetup)
                 .header("X-CSRFToken", csrfTokenFromSetup)
                 .sessionId(userSessionIdFromSetup)
                 .body("{" + dateCreated + "}");
     }
+
     @When("User calls {string} with {string} request")
     public void sendPostWithEstablishedBody(String resourceName, String requestType) throws IOException {
 
-        APIEnum resourceAPI=APIEnum.valueOf(resourceName);
+        APIEnum resourceAPI = APIEnum.valueOf(resourceName);
         System.out.println(resourceAPI.getResource());
 
 
-        resspec =new ResponseSpecBuilder().expectStatusCode(200).build();
+        resspec = new ResponseSpecBuilder().expectStatusCode(200).build();
 
-        if(requestType.equalsIgnoreCase("POST")) {
-            response =req.when().post(resourceAPI.getResource()).then().extract().response();
-        }
-        else if(requestType.equalsIgnoreCase("GET")) {
-            response =req.when().get(resourceAPI.getResource()).then().extract().response();
+        if (requestType.equalsIgnoreCase("POST")) {
+            response = req.when().post(resourceAPI.getResource()).then().extract().response();
+        } else if (requestType.equalsIgnoreCase("GET")) {
+            response = req.when().get(resourceAPI.getResource()).then().extract().response();
         }
     }
 
@@ -132,7 +136,7 @@ public class StepDefinition extends Utils {
 
         JsonPath jspMealcardsData1 = new JsonPath(response.asString());
         int mealcardsQuantity = jspMealcardsData1.getList("").size();
-        Assert.assertEquals(response.statusCode(),200);
+        Assert.assertEquals(response.statusCode(), 200);
         Assert.assertEquals(mealcardsQuantity, expectedQuantity);
         Assert.assertEquals(jspMealcardsData1.getInt("[1].id"), 22222222);
     }
@@ -156,9 +160,61 @@ public class StepDefinition extends Utils {
     @Then("Login form is displayed")
     public void loginFormIsShown() {
 
-       Boolean loginForm =  driver.findElement(By.xpath("/html[1]/body[1]/div[1]/form[2]")).isDisplayed();
-       Assert.assertTrue(loginForm);
-       driver.close();
-       driver.quit();
+        Boolean loginForm = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/form[2]")).isDisplayed();
+        Assert.assertTrue(loginForm);
+    }
+
+    @And("User logs in with valid credentials")
+    public void userSendsLogsInWithValidCredentials() throws IOException {
+        WebElement inputField = driver.findElement(By.xpath("//form[2]//label[1]//input[1]"));
+        inputField.sendKeys(getGlobalValue("VALID_EMAIL"));
+        inputField = driver.findElement(By.xpath("//form[2]//label[2]//input[1]"));
+        inputField.sendKeys(getGlobalValue("VALID_PASSWORD"));
+        driver.findElement(By.xpath("//button[@class='btn-secondary'][contains(text(),'Login')]")).click();
+    }
+
+    @Then("Element with xpath {string} is displayed")
+    public void elementWithXPATHIsDisplayed(String cssSelector) {
+        WebElement loginSuccessAlert = driver.findElement(By.xpath(cssSelector));
+        Assert.assertTrue(loginSuccessAlert.isDisplayed());
+    }
+
+    @Given("Full successful login procedure")
+    public void fullSuccessfulLoginProcedure() throws IOException {
+
+        driver.findElement(By.xpath("/html[1]/body[1]/button[1]")).click();
+        WebElement inputField = driver.findElement(By.xpath("//form[2]//label[1]//input[1]"));
+        inputField.sendKeys(getGlobalValue("VALID_EMAIL"));
+        inputField = driver.findElement(By.xpath("//form[2]//label[2]//input[1]"));
+        inputField.sendKeys(getGlobalValue("VALID_PASSWORD"));
+        driver.findElement(By.xpath("//button[@class='btn-secondary'][contains(text(),'Login')]")).click();
+    }
+
+    @Then("User waits up to {int} seconds for element XPATH {string}")
+    public void userWaitsUpToSeconds(int maxWaitingTime, String xpathElement) {
+        WebDriverWait wait = new WebDriverWait(driver, maxWaitingTime);
+        WebElement linkToBeClicked = wait.until(ExpectedConditions
+                .visibilityOfElementLocated(By
+                        .xpath(xpathElement)));
+        Assert.assertTrue(linkToBeClicked.isDisplayed());
+    }
+
+    @When("User clicks on element XPATH {string} by submit")
+    public void userClicksOnElementXPATHBySubmit(String xpathToBeClicked) {
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        WebElement linkToBeClicked = wait.until(ExpectedConditions
+                .visibilityOfElementLocated(By
+                        .xpath(xpathToBeClicked)));
+        linkToBeClicked.submit();
+    }
+
+    @When("User clicks on element XPATH {string} by Keys.RETURN")
+    public void userClicksOnElementXPATHByKeysReturn(String xpathToBeClicked) {
+        WebDriverWait wait = new WebDriverWait(driver, 2);
+        WebElement linkToBeClicked = wait.until(ExpectedConditions
+                .visibilityOfElementLocated(By
+                        .xpath(xpathToBeClicked)));
+        linkToBeClicked.sendKeys(Keys.RETURN);
     }
 }
+

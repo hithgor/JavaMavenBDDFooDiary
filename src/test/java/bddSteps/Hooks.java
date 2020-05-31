@@ -60,10 +60,12 @@ public class Hooks {
         StepDefinition.driver = new ChromeDriver();
         StepDefinition.driver.manage().timeouts()
                             .implicitlyWait(2, TimeUnit.SECONDS);
+        StepDefinition.driver.manage().window().maximize();
     }
 
     @After("@SeleniumSetUp")
     public void seleniumTearDown() {
-        ///template
+        StepDefinition.driver.close();
+        StepDefinition.driver.quit();
     }
 }
