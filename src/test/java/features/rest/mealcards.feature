@@ -6,7 +6,6 @@ Feature: Mealcards
   @loginRequired
   Scenario Outline: User created mealcards are assigned appropriate names
 
-   # Given Date created payload "\"dateCreated\":\"2020-03-19\""
     Given Working payload "<dateCreated>"
     When User calls "GetMealcardsEndpoint" with "Post" request
     Then Consecutive Mealcards are named approprietly

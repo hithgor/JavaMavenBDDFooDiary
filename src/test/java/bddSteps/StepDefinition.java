@@ -24,6 +24,7 @@ import utilities.Utils;
 
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.List;
 
 import static io.restassured.RestAssured.given;
 
@@ -216,5 +217,65 @@ public class StepDefinition extends Utils {
                         .xpath(xpathToBeClicked)));
         linkToBeClicked.sendKeys(Keys.RETURN);
     }
+
+    @When("User chooses date day {int} month {string} year {int}")
+    public void userChoosesDateDayMonthYear(int targetDay, String targetMonth, int targetYear) throws InterruptedException {
+        WebDriverWait wait = new WebDriverWait(driver, 7);
+        Thread.sleep(1000);
+        WebElement datepicker = driver.findElement(By.id("datepicker"));
+        datepicker.click();
+        WebElement linkToBeClicked = wait.until(ExpectedConditions
+                .visibilityOfElementLocated(By
+                        .xpath("//div[@id='datepicker-frame']/ul/li[2]")));
+        linkToBeClicked.click();
+
+        WebElement displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
+        ///displayedYearElement.click();
+        displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
+        String displayedYear = displayedYearElement.getText();
+        int parsedDisplayedYear = Integer.parseInt(displayedYear);
+        System.out.println(displayedYear);
+
+
+        while(parsedDisplayedYear>targetYear) {
+            driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[1]")).click();
+            displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
+            displayedYear = displayedYearElement.getText();
+            parsedDisplayedYear = Integer.parseInt(displayedYear);
+        }
+        while(parsedDisplayedYear<targetYear) {
+            driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[3]")).click();
+            displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
+            displayedYear = displayedYearElement.getText();
+            parsedDisplayedYear = Integer.parseInt(displayedYear);
+        }
+        targetMonth = targetMonth.substring(0,3);
+        WebElement monthElement = driver.findElement(By.xpath("//td[contains(text(),'"+ targetMonth +"')]"));
+        monthElement.click();
+
+        List<WebElement> dayElementsDisplayed = driver
+                .findElements(By.xpath("//div[@id='datepicker-frame']/table/tr/td[contains(@class, 'pointer')]"));
+        dayElementsDisplayed.get(targetDay-1).click();
+
+    }
+
+    @Then("{int} Mealcards are displayed")
+    public void numberofmealcardsMealcardsAreDisplayed(int predictedNumberOfMealcards) throws InterruptedException {
+         //^[0-9]{5,10}$  --> just leaving that regex here to use for validation of IDs later
+        Thread.sleep(1500);
+        List<WebElement> foundMealcards = driver
+                .findElements(By.xpath("//div[@id='cardContainer']/div"));
+        System.out.println(foundMealcards.size());
+        Assert.assertEquals(foundMealcards.size(), predictedNumberOfMealcards);
+        if(foundMealcards.size() != 0) {
+            for (int i=1; i<=foundMealcards.size(); i++)
+            {
+                WebElement child = driver
+                        .findElement(By.xpath("//body/div[@class='cardContainer']/div["+ i +"]/div[1]"));
+                Assert.assertEquals(8, child.getAttribute("id").length());
+            }
+        }
+    }
+
 }
 

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="11" failures="0" name="cucumber.Options.TestRunner" time="19.775" errors="0" skipped="0">
+<testsuite tests="0" failures="0" name="TestSuite" time="0" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.7+8-LTS"/>
@@ -65,15 +65,4 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="Mealcards" name="User created mealcards are assigned appropriate names" time="2.136"/>
-  <testcase classname="Mealcards" name="User created mealcards are assigned appropriate names" time="0.242"/>
-  <testcase classname="Mealcards" name="User created mealcards are assigned appropriate names" time="0.325"/>
-  <testcase classname="Mealcards" name="User saves mealcards and retrieves them" time="0.329"/>
-  <testcase classname="(A description)" name="(A description)" time="0.006"/>
-  <testcase classname="UserLogin" name="User cannot pick a date without logging in" time="5.648"/>
-  <testcase classname="UserLogin" name="User logs in with valid credentials" time="5.388"/>
-  <testcase classname="UserLogin" name="User logs in and logs out successfully" time="5.684"/>
-  <testcase classname="Manipulating mealcards at DOM level" name="A scenario" time="0.007"/>
-  <testcase classname="A description" name="A scenario" time="0.007"/>
-  <testcase classname="A description" name="A scenario" time="0.003"/>
 </testsuite>
