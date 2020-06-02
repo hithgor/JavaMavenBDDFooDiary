@@ -267,12 +267,15 @@ public class StepDefinition extends Utils {
                 .findElements(By.xpath("//div[@id='cardContainer']/div"));
         System.out.println(foundMealcards.size());
         Assert.assertEquals(foundMealcards.size(), predictedNumberOfMealcards);
+        ArrayList<Integer> acceptableIdLength = new ArrayList<>() ;
+        acceptableIdLength.add(7);
+        acceptableIdLength.add(8);
         if(foundMealcards.size() != 0) {
             for (int i=1; i<=foundMealcards.size(); i++)
             {
                 WebElement child = driver
                         .findElement(By.xpath("//body/div[@class='cardContainer']/div["+ i +"]/div[1]"));
-                Assert.assertEquals(8, child.getAttribute("id").length());
+                Assert.assertTrue(acceptableIdLength.contains(child.getAttribute("id").length()));
             }
         }
     }
