@@ -15,7 +15,7 @@ Feature: Manipulating mealcards at DOM level
       | targetDay | targetMonth | targetYear | numberOfMealcards |
       | 3         | March       | 2020       | 4                 |
       | 4         | March       | 2020       | 3                 |
-      | 18        | March       | 2020       | 2                 |
+      | 5        | March       | 2020       | 2                 |
 
   @SeleniumSetUp
   Scenario Outline: User can add and remove mealcard at DOM level
