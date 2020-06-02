@@ -277,5 +277,21 @@ public class StepDefinition extends Utils {
         }
     }
 
+    @And("Check for mealcard naming convention")
+    public void checkForMealcardNamingConvention() {
+        WebElement thirdMealcard = driver.findElement(By.xpath("//body/div[@class='cardContainer']/div[3]/div[1]"));
+        String thirdMealCardId = thirdMealcard.getAttribute("id");
+
+        driver.findElement(By.xpath("//div[2]//div[1]//div[1]//button[1]")).click();
+        driver.findElement(By.xpath("//button[@id='addMealButton']")).click();
+
+        WebElement secondMealcard = driver.findElement(By.xpath("//body/div[@class='cardContainer']/div[2]/div[1]"));
+        String secondMealcardId = secondMealcard.getAttribute("id");
+        String expectedLunch = driver.findElement(By.xpath("//div[2]//div[1]//div[1]//div[1]//h5[1]")).getText();
+
+        Assert.assertEquals(thirdMealCardId, secondMealcardId);
+        Assert.assertEquals(expectedLunch, "Lunch");
+
+    }
 }
 
