@@ -9,7 +9,7 @@ public class Utils {
     public static String getGlobalValue(String key) throws IOException
     {
         Properties prop =new Properties();
-        FileInputStream fis =new FileInputStream("C:\\Users\\hithg\\Desktop\\pythonlearning\\JavaLearning\\restassured course\\MealcardsTestAPI\\src\\test\\java\\utilities\\global.properties");
+        FileInputStream fis =new FileInputStream(System.getProperty("user.dir") + "\\src\\test\\java\\utilities\\global.properties");
         prop.load(fis);
         return prop.getProperty(key);
 

@@ -8,6 +8,7 @@ import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import utilities.APIEnum;
 import utilities.Utils;
 
@@ -57,7 +58,9 @@ public class Hooks {
     @Before("@SeleniumSetUp")
     public void seleniumSetUp() {
         System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
-        StepDefinition.driver = new ChromeDriver();
+        ChromeOptions chromeHeadlessConfig = new ChromeOptions();
+        chromeHeadlessConfig.addArguments("headless");
+        StepDefinition.driver = new ChromeDriver(chromeHeadlessConfig);
         StepDefinition.driver.manage().timeouts()
                             .implicitlyWait(2, TimeUnit.SECONDS);
         StepDefinition.driver.manage().window().maximize();
