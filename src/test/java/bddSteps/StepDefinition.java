@@ -17,6 +17,7 @@ import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.APIEnum;
 import utilities.TestDataPayloads;
@@ -237,44 +238,43 @@ public class StepDefinition extends Utils {
         System.out.println(displayedYear);
 
 
-        while(parsedDisplayedYear>targetYear) {
+        while (parsedDisplayedYear > targetYear) {
             driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[1]")).click();
             displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
             displayedYear = displayedYearElement.getText();
             parsedDisplayedYear = Integer.parseInt(displayedYear);
         }
-        while(parsedDisplayedYear<targetYear) {
+        while (parsedDisplayedYear < targetYear) {
             driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[3]")).click();
             displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
             displayedYear = displayedYearElement.getText();
             parsedDisplayedYear = Integer.parseInt(displayedYear);
         }
-        targetMonth = targetMonth.substring(0,3);
-        WebElement monthElement = driver.findElement(By.xpath("//td[contains(text(),'"+ targetMonth +"')]"));
+        targetMonth = targetMonth.substring(0, 3);
+        WebElement monthElement = driver.findElement(By.xpath("//td[contains(text(),'" + targetMonth + "')]"));
         monthElement.click();
 
         List<WebElement> dayElementsDisplayed = driver
                 .findElements(By.xpath("//div[@id='datepicker-frame']/table/tr/td[contains(@class, 'pointer')]"));
-        dayElementsDisplayed.get(targetDay-1).click();
+        dayElementsDisplayed.get(targetDay - 1).click();
 
     }
 
     @Then("{int} Mealcards are displayed")
     public void numberofmealcardsMealcardsAreDisplayed(int predictedNumberOfMealcards) throws InterruptedException {
-         //^[0-9]{5,10}$  --> just leaving that regex here to use for validation of IDs later
+        //^[0-9]{5,10}$  --> just leaving that regex here to use for validation of IDs later
         Thread.sleep(1500);
         List<WebElement> foundMealcards = driver
                 .findElements(By.xpath("//div[@id='cardContainer']/div"));
         System.out.println(foundMealcards.size());
         Assert.assertEquals(foundMealcards.size(), predictedNumberOfMealcards);
-        ArrayList<Integer> acceptableIdLength = new ArrayList<>() ;
+        ArrayList<Integer> acceptableIdLength = new ArrayList<>();
         acceptableIdLength.add(7);
         acceptableIdLength.add(8);
-        if(foundMealcards.size() != 0) {
-            for (int i=1; i<=foundMealcards.size(); i++)
-            {
+        if (foundMealcards.size() != 0) {
+            for (int i = 1; i <= foundMealcards.size(); i++) {
                 WebElement child = driver
-                        .findElement(By.xpath("//body/div[@class='cardContainer']/div["+ i +"]/div[1]"));
+                        .findElement(By.xpath("//body/div[@class='cardContainer']/div[" + i + "]/div[1]"));
                 Assert.assertTrue(acceptableIdLength.contains(child.getAttribute("id").length()));
             }
         }
@@ -296,5 +296,61 @@ public class StepDefinition extends Utils {
         Assert.assertEquals(expectedLunch, "Lunch");
 
     }
+
+    @When("User adds ingredient {string} to mealcard number {int}")
+    public void userAddsIngredientStringToIntMealcard(String ingredientFullName, int mealcardNumber) throws InterruptedException {
+        /*
+        Since our site gives unique IDs dynamically to mealcard elements - there's a better way of writing this
+        You could extract id from mealcardNumber and use that to create all needed xpaths on the way.
+        Please refactor some day to make it less disgusting.
+         */
+        mealcardNumber = mealcardNumber + 1;
+        String mealcardXpath = "//body/div[@class='cardContainer']/div[" + mealcardNumber + "]/div[1]";
+        userClicksOnElement(mealcardXpath);
+        userClicksOnElement(" //span[@class='btn-sm spanFoodInvisible spanFoodVisible']");
+
+        WebElement foodNameInput = driver.findElement(By.xpath("//input[@id='searchFoodNameInput1']"));
+        foodNameInput.sendKeys(ingredientFullName);
+
+        userClicksOnElement("//div[@class='formIndex mb-3 formIndexVisible']//button[@class='btn-secondary btnForm']");
+        Thread.sleep(2000);
+        WebElement dropdown = driver.findElement(By
+                .xpath("//div[@class='formIndex mb-3 formIndexVisible']//select[@name='locality']"));
+        Select dropdownSelect = new Select(dropdown);
+        dropdownSelect.selectByVisibleText(ingredientFullName);
+
+        dropdown = driver.findElement(By
+                .xpath("//div[@class='formIndex mb-3 formIndexVisible']//select[@placeholder='Pick a portion']"));
+        Thread.sleep(1500);
+        dropdownSelect = new Select(dropdown);
+        dropdownSelect.selectByIndex(0);
+        userClicksOnElement("//div[@class='formIndex mb-3 formIndexVisible']//button[@class='btn-secondary btn-search-food'][contains(text(),'Add position')]");
+
+
+    }
+
+    @Then("Ingredient {string} is present in mealcard number {int}")
+    public void ingredientIsPresentInMealcardNumber(String ingredientFullName, int mealcardNumber) {
+        mealcardNumber = mealcardNumber + 1;
+        WebElement searchedIngredient = driver.findElement(By
+                .xpath("//div[" + mealcardNumber + "]//div[1]//div[1]//div[2]//span[contains(text(), '" + ingredientFullName + "')]"));
+
+        Assert.assertTrue(searchedIngredient.isDisplayed());
+    }
+
+
+    @Then("Ingredient {string} is not present in mealcard number {int}")
+    public void ingredientIsNotPresentInMealcardNumber(String ingredientFullName, int mealcardNumber) {
+        mealcardNumber = mealcardNumber + 1;
+        List<WebElement> searchedIngredients = driver.findElements(By
+                .xpath("//div[" + mealcardNumber + "]//div[1]//div[1]//div[2]//span[@class='ingredientName']"));
+
+        for (WebElement i : searchedIngredients) {
+            Assert.assertNotEquals(i.getText(), ingredientFullName);
+        }
+
+    }
+
+
 }
 
