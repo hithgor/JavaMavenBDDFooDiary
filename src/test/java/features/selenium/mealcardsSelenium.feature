@@ -77,7 +77,8 @@ Feature: Manipulating mealcards at DOM level
     And User clicks on element XPATH "//button[@id='todayBtn']"
     Then <numberOfMealcards1> Mealcards are displayed
 
-
+    #This works only because removing is broken in source code - clicking on ingredient will
+    # remove all ingredients named same as a clicked one from given mealcard
     When User clicks on element XPATH "//span[@id='2539190-Eggs, Grade A, Large, egg white']"
     Then Ingredient "Eggs, Grade A, Large, egg white" is not present in mealcard number 0
 
@@ -87,6 +88,19 @@ Feature: Manipulating mealcards at DOM level
       | 7         | March       | 2020       | 2                  |
 
 
+  @SeleniumSetUp
+  Scenario Outline: User retrieves mealcards and checks sum of calories on each mealcard
+    Given User is on "CaloriestrackerPage"
+    And Full successful login procedure
+    When User chooses date day <targetDay> month "<targetMonth>" year <targetYear>
+    And User clicks on element XPATH "//button[@id='todayBtn']"
+    Then <numberOfMealcards1> Mealcards are displayed
+
+    And Sum of calories at each mealcard is properly counted
 
 
+    Examples:
+      | targetDay | targetMonth | targetYear | numberOfMealcards1 |
+      | 7         | March       | 2020       | 2                  |
+      | 11        | March       | 2020       | 4                  |
 

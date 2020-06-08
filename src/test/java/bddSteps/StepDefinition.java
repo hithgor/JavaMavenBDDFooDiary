@@ -341,6 +341,7 @@ public class StepDefinition extends Utils {
 
     @Then("Ingredient {string} is not present in mealcard number {int}")
     public void ingredientIsNotPresentInMealcardNumber(String ingredientFullName, int mealcardNumber) {
+
         mealcardNumber = mealcardNumber + 1;
         List<WebElement> searchedIngredients = driver.findElements(By
                 .xpath("//div[" + mealcardNumber + "]//div[1]//div[1]//div[2]//span[@class='ingredientName']"));
@@ -352,5 +353,26 @@ public class StepDefinition extends Utils {
     }
 
 
+    @And("Sum of calories at each mealcard is properly counted")
+    public void sumOfCaloriesAtEachMealcardIsProperlyCounted() {
+
+        List<WebElement> foundMealcards = driver
+                .findElements(By.xpath("//div[@id='cardContainer']/div"));
+        int sumOfCalories;
+        for (int i = 1; i <= foundMealcards.size(); i++) {
+            sumOfCalories = 0;
+            ///List grabs every odd span of a mealcard
+            List<WebElement> spansOfMealcards = driver.findElements(By
+                    .xpath("//div[" + i + "]//div[1]//div[1]//div[2]//span[position() mod 2 = 0]"));
+            for (WebElement j : spansOfMealcards) {
+                sumOfCalories += Integer.parseInt(j.getText());
+            }
+            int displayedSumOfCalories = Integer.parseInt(driver.findElement(By
+                    .xpath("//div[" + i + "]//div[1]//div[1]//div[2]//span[last()]")).getText());
+            System.out.println("Displayed" + displayedSumOfCalories + " counted" + sumOfCalories);
+            Assert.assertEquals(sumOfCalories, displayedSumOfCalories);
+        }
+
+    }
 }
 
