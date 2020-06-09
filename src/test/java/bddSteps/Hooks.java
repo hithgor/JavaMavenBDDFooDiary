@@ -9,6 +9,8 @@ import io.restassured.response.Response;
 import io.restassured.specification.RequestSpecification;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
 import utilities.APIEnum;
 import utilities.Utils;
 
@@ -25,7 +27,7 @@ public class Hooks {
     public void beforeScenario() throws IOException {
         //execute this code only when place id is null
         //write a code that will give you place id
-        StepDefinition loginInData =new StepDefinition();
+        StepDefinition loginInData = new StepDefinition();
         APIEnum endpointResource = APIEnum.valueOf("UserLoginEndpoint");
 
         RequestSpecification req = new RequestSpecBuilder().setUrlEncodingEnabled(true)
@@ -55,6 +57,7 @@ public class Hooks {
         StepDefinition.response = response;
 
     }
+
     @Before("@SeleniumSetUp")
     public void seleniumSetUp() {
         System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
@@ -62,13 +65,31 @@ public class Hooks {
         chromeHeadlessConfig.addArguments("headless");
         StepDefinition.driver = new ChromeDriver(chromeHeadlessConfig);
         StepDefinition.driver.manage().timeouts()
-                            .implicitlyWait(2, TimeUnit.SECONDS);
+                .implicitlyWait(2, TimeUnit.SECONDS);
         StepDefinition.driver.manage().window().maximize();
+    }
+
+    @Before("@SeleniumSetUpFirefox")
+    public void seleniumSetUpFirefox() {
+        System.setProperty("webdriver.gecko.driver", "D:\\geckodriver.exe");
+        FirefoxOptions firefoxHeadlessConfig = new FirefoxOptions();
+        firefoxHeadlessConfig.setHeadless(true);
+        StepDefinition.driver = new FirefoxDriver(firefoxHeadlessConfig);
+        StepDefinition.driver.manage().timeouts()
+                .implicitlyWait(2, TimeUnit.SECONDS);
+        StepDefinition.driver.manage().window().maximize();
+
+    }
+
+    @After("@SeleniumSetUpFirefox")
+    public void seleniumTearDownFirefox() {
+        //StepDefinition.driver.close();
+        // StepDefinition.driver.quit();
     }
 
     @After("@SeleniumSetUp")
     public void seleniumTearDown() {
-        StepDefinition.driver.close();
-        StepDefinition.driver.quit();
+        // StepDefinition.driver.close();
+        //StepDefinition.driver.quit();
     }
 }

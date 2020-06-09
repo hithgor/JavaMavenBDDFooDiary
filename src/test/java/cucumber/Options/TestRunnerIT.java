@@ -6,9 +6,10 @@ import io.cucumber.junit.CucumberOptions;
 import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
-@CucumberOptions(features="src/test/java/features",
+@CucumberOptions(features="src/test/java/features/selenium/chrome/userLoginSelenium.feature",
         plugin ="json:target/jsonReports/cucumber-report.json",
         glue={"bddSteps"})
-public class TestRunner {
+public class TestRunnerIT {
+
 
 }
