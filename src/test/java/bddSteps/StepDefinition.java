@@ -176,9 +176,17 @@ public class StepDefinition extends Utils {
     }
 
     @Then("Element with xpath {string} is displayed")
-    public void elementWithXPATHIsDisplayed(String cssSelector) {
-        WebElement loginSuccessAlert = driver.findElement(By.xpath(cssSelector));
-        Assert.assertTrue(loginSuccessAlert.isDisplayed());
+    public void elementWithXPATHIsDisplayed(String xpathOfSearchedElement) {
+
+        WebElement searchedWebElement = driver.findElement(By.xpath(xpathOfSearchedElement));
+        Assert.assertTrue(searchedWebElement.isDisplayed());
+    }
+
+    @Given("Element with xpath {string} does not exist")
+    public void elementWithXpathIsNotDisplayed(String xpathOfSearchedElement) {
+
+        boolean searchedWebElement = driver.findElements(By.xpath(xpathOfSearchedElement)).isEmpty();
+        Assert.assertTrue(searchedWebElement);
     }
 
     @Given("Full successful login procedure")
@@ -374,5 +382,6 @@ public class StepDefinition extends Utils {
         }
 
     }
+
 }
 

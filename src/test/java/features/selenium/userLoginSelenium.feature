@@ -4,7 +4,7 @@
 Feature: UserLogin
 
   @SeleniumSetUp
-  Scenario: User cannot pick a date without logging in
+  Scenario: User tries to pick a date without logging in
 
     Given User is on "CaloriestrackerPage"
     When User clicks on element XPATH "/html[1]/body[1]/button[1]"
@@ -26,3 +26,11 @@ Feature: UserLogin
     When User clicks on element XPATH "//nav[@class='navbar']//form" by submit
     Then User waits up to 5 seconds for element XPATH "//div[@id='message' and contains(string(), 'You are now logged out')]"
     Then Element with xpath "//div[@id='message' and contains(string(), 'You are now logged out')]" is displayed
+
+  @SeleniumSetUp
+  Scenario: User does not see the logout button without being logged in
+
+    Given User is on "CaloriestrackerPage"
+    Then Element with xpath "//button[@id='logout']" does not exist
+
+
