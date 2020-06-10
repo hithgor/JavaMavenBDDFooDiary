@@ -14,7 +14,6 @@ import io.restassured.specification.ResponseSpecification;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -22,6 +21,8 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import utilities.APIEnum;
 import utilities.TestDataPayloads;
 import utilities.Utils;
+import utilities.driver.DriverFactory;
+import utilities.driver.SharedDriver;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -32,6 +33,9 @@ import static io.restassured.RestAssured.given;
 public class StepDefinition extends Utils {
     ////all given when then definitions will be there
 
+    public StepDefinition(SharedDriver driver) {
+
+    }
 
     static RequestSpecification req;
     static ResponseSpecification resspec;
@@ -42,7 +46,6 @@ public class StepDefinition extends Utils {
     static String csrfTokenFromSetup, userSessionIdFromSetup;
     static SessionFilter sessionFilterFromSetup;
 
-    static WebDriver driver;
 
 
     public void setReqFromSetup(RequestSpecification req) {
@@ -147,62 +150,63 @@ public class StepDefinition extends Utils {
     @Given("User is on {string}")
     public void userIsOn(String expectedPage) throws IOException {
 
+
         APIEnum resourceAPI = APIEnum.valueOf(expectedPage);
         String pathBuilder = getGlobalValue("BASE_URL") + resourceAPI.getResource();
-        driver.get(pathBuilder);
+        DriverFactory.getDriver().get(pathBuilder);
 
     }
 
     @When("User clicks on element XPATH {string}")
     public void userClicksOnElement(String xpathToBeClicked) {
 
-        driver.findElement(By.xpath(xpathToBeClicked)).click();
+        DriverFactory.getDriver().findElement(By.xpath(xpathToBeClicked)).click();
     }
 
     @Then("Login form is displayed")
     public void loginFormIsShown() {
 
-        Boolean loginForm = driver.findElement(By.xpath("/html[1]/body[1]/div[1]/form[2]")).isDisplayed();
+        Boolean loginForm = DriverFactory.getDriver().findElement(By.xpath("/html[1]/body[1]/div[1]/form[2]")).isDisplayed();
         Assert.assertTrue(loginForm);
     }
 
     @And("User logs in with valid credentials")
     public void userSendsLogsInWithValidCredentials() throws IOException {
-        WebElement inputField = driver.findElement(By.xpath("//form[2]//label[1]//input[1]"));
+        WebElement inputField = DriverFactory.getDriver().findElement(By.xpath("//form[2]//label[1]//input[1]"));
         inputField.sendKeys(getGlobalValue("VALID_EMAIL"));
-        inputField = driver.findElement(By.xpath("//form[2]//label[2]//input[1]"));
+        inputField = DriverFactory.getDriver().findElement(By.xpath("//form[2]//label[2]//input[1]"));
         inputField.sendKeys(getGlobalValue("VALID_PASSWORD"));
-        driver.findElement(By.xpath("//button[@class='btn-secondary'][contains(text(),'Login')]")).click();
+        DriverFactory.getDriver().findElement(By.xpath("//button[@class='btn-secondary'][contains(text(),'Login')]")).click();
     }
 
     @Then("Element with xpath {string} is displayed")
     public void elementWithXPATHIsDisplayed(String xpathOfSearchedElement) {
 
-        WebElement searchedWebElement = driver.findElement(By.xpath(xpathOfSearchedElement));
+        WebElement searchedWebElement = DriverFactory.getDriver().findElement(By.xpath(xpathOfSearchedElement));
         Assert.assertTrue(searchedWebElement.isDisplayed());
     }
 
     @Given("Element with xpath {string} does not exist")
     public void elementWithXpathIsNotDisplayed(String xpathOfSearchedElement) {
 
-        boolean searchedWebElement = driver.findElements(By.xpath(xpathOfSearchedElement)).isEmpty();
+        boolean searchedWebElement = DriverFactory.getDriver().findElements(By.xpath(xpathOfSearchedElement)).isEmpty();
         Assert.assertTrue(searchedWebElement);
     }
 
     @Given("Full successful login procedure")
     public void fullSuccessfulLoginProcedure() throws IOException {
 
-        driver.findElement(By.xpath("/html[1]/body[1]/button[1]")).click();
-        WebElement inputField = driver.findElement(By.xpath("//form[2]//label[1]//input[1]"));
+        DriverFactory.getDriver().findElement(By.xpath("/html[1]/body[1]/button[1]")).click();
+        WebElement inputField = DriverFactory.getDriver().findElement(By.xpath("//form[2]//label[1]//input[1]"));
         inputField.sendKeys(getGlobalValue("VALID_EMAIL"));
-        inputField = driver.findElement(By.xpath("//form[2]//label[2]//input[1]"));
+        inputField = DriverFactory.getDriver().findElement(By.xpath("//form[2]//label[2]//input[1]"));
         inputField.sendKeys(getGlobalValue("VALID_PASSWORD"));
-        driver.findElement(By.xpath("//button[@class='btn-secondary'][contains(text(),'Login')]")).click();
+        DriverFactory.getDriver().findElement(By.xpath("//button[@class='btn-secondary'][contains(text(),'Login')]")).click();
     }
 
     @Then("User waits up to {int} seconds for element XPATH {string}")
     public void userWaitsUpToSeconds(int maxWaitingTime, String xpathElement) {
-        WebDriverWait wait = new WebDriverWait(driver, maxWaitingTime);
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), maxWaitingTime);
         WebElement linkToBeClicked = wait.until(ExpectedConditions
                 .visibilityOfElementLocated(By
                         .xpath(xpathElement)));
@@ -211,7 +215,7 @@ public class StepDefinition extends Utils {
 
     @When("User clicks on element XPATH {string} by submit")
     public void userClicksOnElementXPATHBySubmit(String xpathToBeClicked) {
-        WebDriverWait wait = new WebDriverWait(driver, 2);
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 2);
         WebElement linkToBeClicked = wait.until(ExpectedConditions
                 .visibilityOfElementLocated(By
                         .xpath(xpathToBeClicked)));
@@ -220,7 +224,7 @@ public class StepDefinition extends Utils {
 
     @When("User clicks on element XPATH {string} by Keys.RETURN")
     public void userClicksOnElementXPATHByKeysReturn(String xpathToBeClicked) {
-        WebDriverWait wait = new WebDriverWait(driver, 2);
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 2);
         WebElement linkToBeClicked = wait.until(ExpectedConditions
                 .visibilityOfElementLocated(By
                         .xpath(xpathToBeClicked)));
@@ -229,40 +233,40 @@ public class StepDefinition extends Utils {
 
     @When("User chooses date day {int} month {string} year {int}")
     public void userChoosesDateDayMonthYear(int targetDay, String targetMonth, int targetYear) throws InterruptedException {
-        WebDriverWait wait = new WebDriverWait(driver, 7);
+        WebDriverWait wait = new WebDriverWait(DriverFactory.getDriver(), 7);
         Thread.sleep(1000);
-        WebElement datepicker = driver.findElement(By.id("datepicker"));
+        WebElement datepicker = DriverFactory.getDriver().findElement(By.id("datepicker"));
         datepicker.click();
         WebElement linkToBeClicked = wait.until(ExpectedConditions
                 .visibilityOfElementLocated(By
                         .xpath("//div[@id='datepicker-frame']/ul/li[2]")));
         linkToBeClicked.click();
 
-        WebElement displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
+        WebElement displayedYearElement = DriverFactory.getDriver().findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
         ///displayedYearElement.click();
-        displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
+        displayedYearElement = DriverFactory.getDriver().findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
         String displayedYear = displayedYearElement.getText();
         int parsedDisplayedYear = Integer.parseInt(displayedYear);
         System.out.println(displayedYear);
 
 
         while (parsedDisplayedYear > targetYear) {
-            driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[1]")).click();
-            displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
+            DriverFactory.getDriver().findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[1]")).click();
+            displayedYearElement = DriverFactory.getDriver().findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
             displayedYear = displayedYearElement.getText();
             parsedDisplayedYear = Integer.parseInt(displayedYear);
         }
         while (parsedDisplayedYear < targetYear) {
-            driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[3]")).click();
-            displayedYearElement = driver.findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
+            DriverFactory.getDriver().findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[3]")).click();
+            displayedYearElement = DriverFactory.getDriver().findElement(By.xpath("//div[@id='datepicker-frame']/ul/li[2]"));
             displayedYear = displayedYearElement.getText();
             parsedDisplayedYear = Integer.parseInt(displayedYear);
         }
         targetMonth = targetMonth.substring(0, 3);
-        WebElement monthElement = driver.findElement(By.xpath("//td[contains(text(),'" + targetMonth + "')]"));
+        WebElement monthElement = DriverFactory.getDriver().findElement(By.xpath("//td[contains(text(),'" + targetMonth + "')]"));
         monthElement.click();
 
-        List<WebElement> dayElementsDisplayed = driver
+        List<WebElement> dayElementsDisplayed = DriverFactory.getDriver()
                 .findElements(By.xpath("//div[@id='datepicker-frame']/table/tr/td[contains(@class, 'pointer')]"));
         dayElementsDisplayed.get(targetDay - 1).click();
 
@@ -272,7 +276,7 @@ public class StepDefinition extends Utils {
     public void numberofmealcardsMealcardsAreDisplayed(int predictedNumberOfMealcards) throws InterruptedException {
         //^[0-9]{5,10}$  --> just leaving that regex here to use for validation of IDs later
         Thread.sleep(1500);
-        List<WebElement> foundMealcards = driver
+        List<WebElement> foundMealcards = DriverFactory.getDriver()
                 .findElements(By.xpath("//div[@id='cardContainer']/div"));
         System.out.println(foundMealcards.size());
         Assert.assertEquals(foundMealcards.size(), predictedNumberOfMealcards);
@@ -281,7 +285,7 @@ public class StepDefinition extends Utils {
         acceptableIdLength.add(8);
         if (foundMealcards.size() != 0) {
             for (int i = 1; i <= foundMealcards.size(); i++) {
-                WebElement child = driver
+                WebElement child = DriverFactory.getDriver()
                         .findElement(By.xpath("//body/div[@class='cardContainer']/div[" + i + "]/div[1]"));
                 Assert.assertTrue(acceptableIdLength.contains(child.getAttribute("id").length()));
             }
@@ -290,15 +294,15 @@ public class StepDefinition extends Utils {
 
     @And("Check for mealcard naming convention")
     public void checkForMealcardNamingConvention() {
-        WebElement thirdMealcard = driver.findElement(By.xpath("//body/div[@class='cardContainer']/div[3]/div[1]"));
+        WebElement thirdMealcard = DriverFactory.getDriver().findElement(By.xpath("//body/div[@class='cardContainer']/div[3]/div[1]"));
         String thirdMealCardId = thirdMealcard.getAttribute("id");
 
-        driver.findElement(By.xpath("//div[2]//div[1]//div[1]//button[1]")).click();
-        driver.findElement(By.xpath("//button[@id='addMealButton']")).click();
+        DriverFactory.getDriver().findElement(By.xpath("//div[2]//div[1]//div[1]//button[1]")).click();
+        DriverFactory.getDriver().findElement(By.xpath("//button[@id='addMealButton']")).click();
 
-        WebElement secondMealcard = driver.findElement(By.xpath("//body/div[@class='cardContainer']/div[2]/div[1]"));
+        WebElement secondMealcard = DriverFactory.getDriver().findElement(By.xpath("//body/div[@class='cardContainer']/div[2]/div[1]"));
         String secondMealcardId = secondMealcard.getAttribute("id");
-        String expectedLunch = driver.findElement(By.xpath("//div[2]//div[1]//div[1]//div[1]//h5[1]")).getText();
+        String expectedLunch = DriverFactory.getDriver().findElement(By.xpath("//div[2]//div[1]//div[1]//div[1]//h5[1]")).getText();
 
         Assert.assertEquals(thirdMealCardId, secondMealcardId);
         Assert.assertEquals(expectedLunch, "Lunch");
@@ -317,17 +321,17 @@ public class StepDefinition extends Utils {
         userClicksOnElement(mealcardXpath);
         userClicksOnElement(" //span[@class='btn-sm spanFoodInvisible spanFoodVisible']");
 
-        WebElement foodNameInput = driver.findElement(By.xpath("//input[@id='searchFoodNameInput1']"));
+        WebElement foodNameInput = DriverFactory.getDriver().findElement(By.xpath("//input[@id='searchFoodNameInput1']"));
         foodNameInput.sendKeys(ingredientFullName);
 
         userClicksOnElement("//div[@class='formIndex mb-3 formIndexVisible']//button[@class='btn-secondary btnForm']");
         Thread.sleep(2000);
-        WebElement dropdown = driver.findElement(By
+        WebElement dropdown = DriverFactory.getDriver().findElement(By
                 .xpath("//div[@class='formIndex mb-3 formIndexVisible']//select[@name='locality']"));
         Select dropdownSelect = new Select(dropdown);
         dropdownSelect.selectByVisibleText(ingredientFullName);
 
-        dropdown = driver.findElement(By
+        dropdown = DriverFactory.getDriver().findElement(By
                 .xpath("//div[@class='formIndex mb-3 formIndexVisible']//select[@placeholder='Pick a portion']"));
         Thread.sleep(1500);
         dropdownSelect = new Select(dropdown);
@@ -340,7 +344,7 @@ public class StepDefinition extends Utils {
     @Then("Ingredient {string} is present in mealcard number {int}")
     public void ingredientIsPresentInMealcardNumber(String ingredientFullName, int mealcardNumber) {
         mealcardNumber = mealcardNumber + 1;
-        WebElement searchedIngredient = driver.findElement(By
+        WebElement searchedIngredient = DriverFactory.getDriver().findElement(By
                 .xpath("//div[" + mealcardNumber + "]//div[1]//div[1]//div[2]//span[contains(text(), '" + ingredientFullName + "')]"));
 
         Assert.assertTrue(searchedIngredient.isDisplayed());
@@ -351,7 +355,7 @@ public class StepDefinition extends Utils {
     public void ingredientIsNotPresentInMealcardNumber(String ingredientFullName, int mealcardNumber) {
 
         mealcardNumber = mealcardNumber + 1;
-        List<WebElement> searchedIngredients = driver.findElements(By
+        List<WebElement> searchedIngredients = DriverFactory.getDriver().findElements(By
                 .xpath("//div[" + mealcardNumber + "]//div[1]//div[1]//div[2]//span[@class='ingredientName']"));
 
         for (WebElement i : searchedIngredients) {
@@ -364,18 +368,18 @@ public class StepDefinition extends Utils {
     @And("Sum of calories at each mealcard is properly counted")
     public void sumOfCaloriesAtEachMealcardIsProperlyCounted() {
 
-        List<WebElement> foundMealcards = driver
+        List<WebElement> foundMealcards = DriverFactory.getDriver()
                 .findElements(By.xpath("//div[@id='cardContainer']/div"));
         int sumOfCalories;
         for (int i = 1; i <= foundMealcards.size(); i++) {
             sumOfCalories = 0;
             ///List grabs every odd span of a mealcard
-            List<WebElement> spansOfMealcards = driver.findElements(By
+            List<WebElement> spansOfMealcards = DriverFactory.getDriver().findElements(By
                     .xpath("//div[" + i + "]//div[1]//div[1]//div[2]//span[position() mod 2 = 0]"));
             for (WebElement j : spansOfMealcards) {
                 sumOfCalories += Integer.parseInt(j.getText());
             }
-            int displayedSumOfCalories = Integer.parseInt(driver.findElement(By
+            int displayedSumOfCalories = Integer.parseInt(DriverFactory.getDriver().findElement(By
                     .xpath("//div[" + i + "]//div[1]//div[1]//div[2]//span[last()]")).getText());
             System.out.println("Displayed" + displayedSumOfCalories + " counted" + sumOfCalories);
             Assert.assertEquals(sumOfCalories, displayedSumOfCalories);

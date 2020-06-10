@@ -28,7 +28,7 @@
                     <parallel>methods</parallel>
                     <threadCount>12</threadCount>
                     <perCoreThreadCount>true</perCoreThreadCount>
-                    <forkCount>2C</forkCount>
+                    <forkCount>2</forkCount>
                     <reuseForks>true</reuseForks>
                 </configuration>
             </plugin>
@@ -106,6 +106,14 @@
         <groupId>org.seleniumhq.selenium</groupId>
         <artifactId>selenium-java</artifactId>
         <version>4.0.0-alpha-5</version>
+    </dependency>
+
+    <!-- https://mvnrepository.com/artifact/io.cucumber/cucumber-picocontainer -->
+    <dependency>
+        <groupId>io.cucumber</groupId>
+        <artifactId>cucumber-picocontainer</artifactId>
+        <version>6.0.0</version>
+        <scope>test</scope>
     </dependency>
 
 

@@ -5,5 +5,8 @@ utilities\Utils.class
 cucumber\Options\TestRunnerFFIT.class
 cucumber\Options\TestRunnerIT.class
 bddSteps\Hooks.class
+utilities\driver\SharedDriver.class
 utilities\APIEnum.class
+utilities\driver\DriverFactory$1.class
 utilities\pojo\Ingredient.class
+utilities\driver\DriverFactory.class

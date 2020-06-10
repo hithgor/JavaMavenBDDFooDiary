@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="UserLogin" time="24.469" tests="4" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="User stats plot" time="19.602" tests="2" errors="0" skipped="0" failures="0">
   <properties>
     <property name="sun.desktop" value="windows"/>
     <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
@@ -63,8 +63,6 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="55.0"/>
   </properties>
-  <testcase name="User tries to pick a date without logging in" classname="UserLogin" time="6.921"/>
-  <testcase name="User logs in with valid credentials" classname="UserLogin" time="5.176"/>
-  <testcase name="User logs in and logs out successfully" classname="UserLogin" time="6.047"/>
-  <testcase name="User does not see the logout button without being logged in" classname="UserLogin" time="6.325"/>
+  <testcase name="User logs in and checks his consumption plot" classname="User stats plot" time="10.656"/>
+  <testcase name="User cannot prompt plot functionality without logging in" classname="User stats plot" time="8.946"/>
 </testsuite>

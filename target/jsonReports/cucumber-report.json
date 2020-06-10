@@ -3,15 +3,1622 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2020-06-09T16:48:08.838Z",
+        "start_timestamp": "2020-06-10T14:41:12.319Z",
         "before": [
           {
             "result": {
-              "duration": 4327625700,
+              "duration": 2999500,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUp()"
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "User creates two mealcards and saves them",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-creates-two-mealcards-and-saves-them;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 1093999000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 5435945200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 903003400,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1952001300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User chooses date day 3 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 30
+                },
+                {
+                  "val": "2020",
+                  "offset": 43
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 215994400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1608000800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "4 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:41:23.551Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 17,
+        "name": "User creates two mealcards and saves them",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-creates-two-mealcards-and-saves-them;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 851999500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3812987300,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 845994000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1925023300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User chooses date day 4 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 30
+                },
+                {
+                  "val": "2020",
+                  "offset": 43
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 222996400,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1572556800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "3 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:41:32.787Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 18,
+        "name": "User creates two mealcards and saves them",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-creates-two-mealcards-and-saves-them;;4",
+        "after": [
+          {
+            "result": {
+              "duration": 777998900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3037443200,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 821001000,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1946839200,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "User chooses date day 5 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 30
+                },
+                {
+                  "val": "2020",
+                  "offset": 43
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 216084800,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1558919600,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "2 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:41:41.149Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 35,
+        "name": "User can add and remove mealcard at DOM level",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-can-add-and-remove-mealcard-at-dom-level;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 882123700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3074722100,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 908981400,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1941909600,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "User chooses date day 5 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "5",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 30
+                },
+                {
+                  "val": "2020",
+                  "offset": 43
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 224158900,
+              "status": "passed"
+            },
+            "line": 26,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1565291400,
+              "status": "passed"
+            },
+            "line": 27,
+            "name": "2 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 218058300,
+              "status": "passed"
+            },
+            "line": 28,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027addMealButton\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027addMealButton\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1558114800,
+              "status": "passed"
+            },
+            "line": 29,
+            "name": "3 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 224209500,
+              "status": "passed"
+            },
+            "line": 30,
+            "name": "User clicks on element XPATH \"//div[3]//div[1]//div[1]//button[1]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//div[3]//div[1]//div[1]//button[1]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 1583352400,
+              "status": "passed"
+            },
+            "line": 31,
+            "name": "2 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:41:53.334Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 51,
+        "name": "User retrieves 3 mealcards removes middle one and adds another",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-retrieves-3-mealcards-removes-middle-one-and-adds-another;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 773996300,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3105913700,
+              "status": "passed"
+            },
+            "line": 42,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 805995800,
+              "status": "passed"
+            },
+            "line": 43,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1941126800,
+              "status": "passed"
+            },
+            "line": 44,
+            "name": "User chooses date day 6 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "6",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 30
+                },
+                {
+                  "val": "2020",
+                  "offset": 43
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 223306400,
+              "status": "passed"
+            },
+            "line": 45,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1554486500,
+              "status": "passed"
+            },
+            "line": 46,
+            "name": "3 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 490949700,
+              "status": "passed"
+            },
+            "line": 47,
+            "name": "Check for mealcard naming convention",
+            "match": {
+              "location": "bddSteps.StepDefinition.checkForMealcardNamingConvention()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1630231600,
+              "status": "passed"
+            },
+            "line": 48,
+            "name": "3 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "3",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:42:03.867Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 70,
+        "name": "User chooses ingredients and adds them to lunch mealcard",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-chooses-ingredients-and-adds-them-to-lunch-mealcard;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 778045900,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3099327600,
+              "status": "passed"
+            },
+            "line": 57,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 813073800,
+              "status": "passed"
+            },
+            "line": 58,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1945727000,
+              "status": "passed"
+            },
+            "line": 59,
+            "name": "User chooses date day 7 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 30
+                },
+                {
+                  "val": "2020",
+                  "offset": 43
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 217414000,
+              "status": "passed"
+            },
+            "line": 60,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1568030700,
+              "status": "passed"
+            },
+            "line": 61,
+            "name": "2 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 4797942000,
+              "status": "passed"
+            },
+            "line": 64,
+            "name": "User adds ingredient \"Eggs, Grade A, Large, egg white\" to mealcard number 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Eggs, Grade A, Large, egg white\"",
+                  "offset": 21
+                },
+                {
+                  "val": "1",
+                  "offset": 74
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userAddsIngredientStringToIntMealcard(java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 46996400,
+              "status": "passed"
+            },
+            "line": 65,
+            "name": "Ingredient \"Eggs, Grade A, Large, egg white\" is present in mealcard number 1",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Eggs, Grade A, Large, egg white\"",
+                  "offset": 11
+                },
+                {
+                  "val": "1",
+                  "offset": 75
+                }
+              ],
+              "location": "bddSteps.StepDefinition.ingredientIsPresentInMealcardNumber(java.lang.String,int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:42:17.137Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 88,
+        "name": "User removes ingredient from a mealcard",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-removes-ingredient-from-a-mealcard;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 888478000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3096492400,
+              "status": "passed"
+            },
+            "line": 74,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 830165400,
+              "status": "passed"
+            },
+            "line": 75,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1965980900,
+              "status": "passed"
+            },
+            "line": 76,
+            "name": "User chooses date day 7 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 30
+                },
+                {
+                  "val": "2020",
+                  "offset": 43
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 213003400,
+              "status": "passed"
+            },
+            "line": 77,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1562322300,
+              "status": "passed"
+            },
+            "line": 78,
+            "name": "2 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 223030500,
+              "status": "passed"
+            },
+            "line": 82,
+            "name": "User clicks on element XPATH \"//span[@id\u003d\u00272539190-Eggs, Grade A, Large, egg white\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//span[@id\u003d\u00272539190-Eggs, Grade A, Large, egg white\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 25996200,
+              "status": "passed"
+            },
+            "line": 83,
+            "name": "Ingredient \"Eggs, Grade A, Large, egg white\" is not present in mealcard number 0",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"Eggs, Grade A, Large, egg white\"",
+                  "offset": 11
+                },
+                {
+                  "val": "0",
+                  "offset": 79
+                }
+              ],
+              "location": "bddSteps.StepDefinition.ingredientIsNotPresentInMealcardNumber(java.lang.String,int)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:42:25.950Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 104,
+        "name": "User retrieves mealcards and checks sum of calories on each mealcard",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-retrieves-mealcards-and-checks-sum-of-calories-on-each-mealcard;;2",
+        "after": [
+          {
+            "result": {
+              "duration": 875997200,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3572862400,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 886575100,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1935682000,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "User chooses date day 7 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "7",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 30
+                },
+                {
+                  "val": "2020",
+                  "offset": 43
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 223985600,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1548058500,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "2 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "2",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2079287800,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "Sum of calories at each mealcard is properly counted",
+            "match": {
+              "location": "bddSteps.StepDefinition.sumOfCaloriesAtEachMealcardIsProperlyCounted()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:42:37.078Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 105,
+        "name": "User retrieves mealcards and checks sum of calories on each mealcard",
+        "description": "",
+        "id": "manipulating-mealcards-at-dom-level;user-retrieves-mealcards-and-checks-sum-of-calories-on-each-mealcard;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 733998500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 3091523900,
+              "status": "passed"
+            },
+            "line": 93,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 846918100,
+              "status": "passed"
+            },
+            "line": 94,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1970029400,
+              "status": "passed"
+            },
+            "line": 95,
+            "name": "User chooses date day 11 month \"March\" year 2020",
+            "match": {
+              "arguments": [
+                {
+                  "val": "11",
+                  "offset": 22
+                },
+                {
+                  "val": "\"March\"",
+                  "offset": 31
+                },
+                {
+                  "val": "2020",
+                  "offset": 44
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userChoosesDateDayMonthYear(int,java.lang.String,int)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 221993300,
+              "status": "passed"
+            },
+            "line": 96,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027todayBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027todayBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1609135500,
+              "status": "passed"
+            },
+            "line": 97,
+            "name": "4 Mealcards are displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "4",
+                  "offset": 0
+                }
+              ],
+              "location": "bddSteps.StepDefinition.numberofmealcardsMealcardsAreDisplayed(int)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 74998400,
+              "status": "passed"
+            },
+            "line": 99,
+            "name": "Sum of calories at each mealcard is properly counted",
+            "match": {
+              "location": "bddSteps.StepDefinition.sumOfCaloriesAtEachMealcardIsProperlyCounted()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      }
+    ],
+    "name": "Manipulating mealcards at DOM level",
+    "description": "",
+    "id": "manipulating-mealcards-at-dom-level",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/selenium/firefox/mealcardsSelenium.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-06-10T14:41:12.319Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2999500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 7,
+        "name": "User logs in and checks his consumption plot",
+        "description": "",
+        "id": "user-stats-plot;user-logs-in-and-checks-his-consumption-plot",
+        "after": [
+          {
+            "result": {
+              "duration": 1019002700,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 5838944800,
+              "status": "passed"
+            },
+            "line": 8,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 991998200,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Full successful login procedure",
+            "match": {
+              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 2012001400,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "Element with xpath \"//div[@class\u003d\u0027svg-container\u0027]\" does not exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//div[@class\u003d\u0027svg-container\u0027]\"",
+                  "offset": 19
+                }
+              ],
+              "location": "bddSteps.StepDefinition.elementWithXpathIsNotDisplayed(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 222999700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "User clicks on element XPATH \"//button[@id\u003d\u0027toggleStatsBtn\u0027]\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027toggleStatsBtn\u0027]\"",
+                  "offset": 29
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userClicksOnElement(java.lang.String)"
+            },
+            "keyword": "When "
+          },
+          {
+            "result": {
+              "duration": 335000400,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "Element with xpath \"//div[@class\u003d\u0027svg-container\u0027]\" is displayed",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//div[@class\u003d\u0027svg-container\u0027]\"",
+                  "offset": 19
+                }
+              ],
+              "location": "bddSteps.StepDefinition.elementWithXPATHIsDisplayed(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2020-06-10T14:41:22.763Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+            }
+          }
+        ],
+        "line": 16,
+        "name": "User cannot prompt plot functionality without logging in",
+        "description": "",
+        "id": "user-stats-plot;user-cannot-prompt-plot-functionality-without-logging-in",
+        "after": [
+          {
+            "result": {
+              "duration": 892998400,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 4031999800,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "User is on \"CaloriestrackerPage\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"CaloriestrackerPage\"",
+                  "offset": 11
+                }
+              ],
+              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 2005998100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "Element with xpath \"//div[@class\u003d\u0027svg-container\u0027]\" does not exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//div[@class\u003d\u0027svg-container\u0027]\"",
+                  "offset": 19
+                }
+              ],
+              "location": "bddSteps.StepDefinition.elementWithXpathIsNotDisplayed(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2009578200,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "Element with xpath \"//button[@id\u003d\u0027toggleStatsBtn\u0027]\" does not exist",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"//button[@id\u003d\u0027toggleStatsBtn\u0027]\"",
+                  "offset": 19
+                }
+              ],
+              "location": "bddSteps.StepDefinition.elementWithXpathIsNotDisplayed(java.lang.String)"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@SeleniumSetUpFirefox"
+          }
+        ]
+      }
+    ],
+    "name": "User stats plot",
+    "description": "",
+    "id": "user-stats-plot",
+    "keyword": "Feature",
+    "uri": "file:src/test/java/features/selenium/firefox/plottingSelenium.feature",
+    "tags": []
+  },
+  {
+    "line": 4,
+    "elements": [
+      {
+        "start_timestamp": "2020-06-10T14:41:12.319Z",
+        "before": [
+          {
+            "result": {
+              "duration": 2999500,
+              "status": "passed"
+            },
+            "match": {
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
             }
           }
         ],
@@ -22,11 +1629,11 @@
         "after": [
           {
             "result": {
-              "duration": 634001300,
+              "duration": 988998100,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDown()"
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
             }
           }
         ],
@@ -35,7 +1642,7 @@
         "steps": [
           {
             "result": {
-              "duration": 860045600,
+              "duration": 5420944800,
               "status": "passed"
             },
             "line": 9,
@@ -53,7 +1660,7 @@
           },
           {
             "result": {
-              "duration": 62002000,
+              "duration": 232998400,
               "status": "passed"
             },
             "line": 10,
@@ -71,7 +1678,7 @@
           },
           {
             "result": {
-              "duration": 50997300,
+              "duration": 38003400,
               "status": "passed"
             },
             "line": 11,
@@ -84,20 +1691,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUp"
+            "name": "@SeleniumSetUpFirefox"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-09T16:48:14.807Z",
+        "start_timestamp": "2020-06-10T14:41:19.026Z",
         "before": [
           {
             "result": {
-              "duration": 3296730000,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUp()"
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
             }
           }
         ],
@@ -108,11 +1714,11 @@
         "after": [
           {
             "result": {
-              "duration": 564272000,
+              "duration": 903998100,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDown()"
+              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
             }
           }
         ],
@@ -121,7 +1727,7 @@
         "steps": [
           {
             "result": {
-              "duration": 833999700,
+              "duration": 3170002100,
               "status": "passed"
             },
             "line": 16,
@@ -139,7 +1745,7 @@
           },
           {
             "result": {
-              "duration": 58998900,
+              "duration": 226996700,
               "status": "passed"
             },
             "line": 17,
@@ -157,7 +1763,7 @@
           },
           {
             "result": {
-              "duration": 498000100,
+              "duration": 845999100,
               "status": "passed"
             },
             "line": 18,
@@ -169,7 +1775,7 @@
           },
           {
             "result": {
-              "duration": 29997900,
+              "duration": 23002400,
               "status": "passed"
             },
             "line": 19,
@@ -188,20 +1794,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUp"
+            "name": "@SeleniumSetUpFirefox"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-09T16:48:20.106Z",
+        "start_timestamp": "2020-06-10T14:41:24.201Z",
         "before": [
           {
             "result": {
-              "duration": 3265258600,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUp()"
+              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
             }
           }
         ],
@@ -212,197 +1817,8 @@
         "after": [
           {
             "result": {
-              "duration": 562999200,
+              "duration": 768017200,
               "status": "passed"
-            },
-            "match": {
-              "location": "bddSteps.Hooks.seleniumTearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 869999200,
-              "status": "passed"
-            },
-            "line": 24,
-            "name": "User is on \"CaloriestrackerPage\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"CaloriestrackerPage\"",
-                  "offset": 11
-                }
-              ],
-              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 601003100,
-              "status": "passed"
-            },
-            "line": 25,
-            "name": "Full successful login procedure",
-            "match": {
-              "location": "bddSteps.StepDefinition.fullSuccessfulLoginProcedure()"
-            },
-            "keyword": "And "
-          },
-          {
-            "result": {
-              "duration": 213003400,
-              "status": "passed"
-            },
-            "line": 26,
-            "name": "User clicks on element XPATH \"//nav[@class\u003d\u0027navbar\u0027]//form\" by submit",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"//nav[@class\u003d\u0027navbar\u0027]//form\"",
-                  "offset": 29
-                }
-              ],
-              "location": "bddSteps.StepDefinition.userClicksOnElementXPATHBySubmit(java.lang.String)"
-            },
-            "keyword": "When "
-          },
-          {
-            "result": {
-              "duration": 41000300,
-              "status": "passed"
-            },
-            "line": 27,
-            "name": "User waits up to 5 seconds for element XPATH \"//div[@id\u003d\u0027message\u0027 and contains(string(), \u0027You are now logged out\u0027)]\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "5",
-                  "offset": 17
-                },
-                {
-                  "val": "\"//div[@id\u003d\u0027message\u0027 and contains(string(), \u0027You are now logged out\u0027)]\"",
-                  "offset": 45
-                }
-              ],
-              "location": "bddSteps.StepDefinition.userWaitsUpToSeconds(int,java.lang.String)"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 21993800,
-              "status": "passed"
-            },
-            "line": 28,
-            "name": "Element with xpath \"//div[@id\u003d\u0027message\u0027 and contains(string(), \u0027You are now logged out\u0027)]\" is displayed",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"//div[@id\u003d\u0027message\u0027 and contains(string(), \u0027You are now logged out\u0027)]\"",
-                  "offset": 19
-                }
-              ],
-              "location": "bddSteps.StepDefinition.elementWithXPATHIsDisplayed(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@SeleniumSetUp"
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2020-06-09T16:48:25.689Z",
-        "before": [
-          {
-            "result": {
-              "duration": 3279657100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "bddSteps.Hooks.seleniumSetUp()"
-            }
-          }
-        ],
-        "line": 31,
-        "name": "User does not see the logout button without being logged in",
-        "description": "",
-        "id": "userlogin;user-does-not-see-the-logout-button-without-being-logged-in",
-        "after": [
-          {
-            "result": {
-              "duration": 562000800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "bddSteps.Hooks.seleniumTearDown()"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 824006700,
-              "status": "passed"
-            },
-            "line": 33,
-            "name": "User is on \"CaloriestrackerPage\"",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"CaloriestrackerPage\"",
-                  "offset": 11
-                }
-              ],
-              "location": "bddSteps.StepDefinition.userIsOn(java.lang.String)"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 2057950000,
-              "status": "passed"
-            },
-            "line": 34,
-            "name": "Element with xpath \"//button[@id\u003d\u0027logout\u0027]\" does not exist",
-            "match": {
-              "arguments": [
-                {
-                  "val": "\"//button[@id\u003d\u0027logout\u0027]\"",
-                  "offset": 19
-                }
-              ],
-              "location": "bddSteps.StepDefinition.elementWithXpathIsNotDisplayed(java.lang.String)"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@SeleniumSetUp"
-          }
-        ]
-      }
-    ],
-    "name": "UserLogin",
-    "description": "",
-    "id": "userlogin",
-    "keyword": "Feature",
-    "uri": "file:src/test/java/features/selenium/chrome/userLoginSelenium.feature",
-    "tags": []
-  }
-]n: 0.26.0, moz:headless: true, moz:processID: 32192, moz:profile: C:\\Users\\hithg\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: b73708df-2c19-4c8d-873c-d037f94ebc6a\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:479)\r\n\tat bddSteps.Hooks.seleniumTearDownFirefox(Hooks.java:85)\r\n",
-              "duration": 946995100,
-              "status": "failed"
             },
             "match": {
               "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
@@ -414,7 +1830,7 @@
         "steps": [
           {
             "result": {
-              "duration": 935400600,
+              "duration": 3904002000,
               "status": "passed"
             },
             "line": 24,
@@ -432,7 +1848,7 @@
           },
           {
             "result": {
-              "duration": 793002300,
+              "duration": 847999500,
               "status": "passed"
             },
             "line": 25,
@@ -444,7 +1860,7 @@
           },
           {
             "result": {
-              "duration": 37000100,
+              "duration": 29003500,
               "status": "passed"
             },
             "line": 26,
@@ -462,7 +1878,7 @@
           },
           {
             "result": {
-              "duration": 159000700,
+              "duration": 155994300,
               "status": "passed"
             },
             "line": 27,
@@ -484,7 +1900,7 @@
           },
           {
             "result": {
-              "duration": 355998500,
+              "duration": 337001800,
               "status": "passed"
             },
             "line": 28,
@@ -508,11 +1924,10 @@
         ]
       },
       {
-        "start_timestamp": "2020-06-09T16:48:25.771Z",
+        "start_timestamp": "2020-06-10T14:41:30.247Z",
         "before": [
           {
             "result": {
-              "duration": 2239635400,
               "status": "passed"
             },
             "match": {
@@ -527,9 +1942,8 @@
         "after": [
           {
             "result": {
-              "error_message": "org.openqa.selenium.NoSuchSessionException: Tried to run command without establishing a connection\nBuild info: version: \u00274.0.0-alpha-5\u0027, revision: \u0027b3a0d621cc\u0027\nSystem info: host: \u0027DESKTOP-KVHF9QD\u0027, ip: \u0027192.168.100.39\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.7\u0027\nDriver info: org.openqa.selenium.firefox.FirefoxDriver\nCapabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: true, moz:processID: 46700, moz:profile: C:\\Users\\hithg\\AppData\\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}\nSession ID: fee8b693-0b0d-4113-ad8b-03011241ccec\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:639)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:643)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.quit(RemoteWebDriver.java:479)\r\n\tat bddSteps.Hooks.seleniumTearDownFirefox(Hooks.java:85)\r\n",
-              "duration": 929925500,
-              "status": "failed"
+              "duration": 759000000,
+              "status": "passed"
             },
             "match": {
               "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
@@ -541,7 +1955,7 @@
         "steps": [
           {
             "result": {
-              "duration": 947022300,
+              "duration": 3551677700,
               "status": "passed"
             },
             "line": 33,
@@ -559,7 +1973,7 @@
           },
           {
             "result": {
-              "duration": 2014034000,
+              "duration": 2011326100,
               "status": "passed"
             },
             "line": 34,
