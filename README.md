@@ -1,5 +1,5 @@
 # JavaMavenBDDFooDiary
-Java framework to take for my testing adventures.
+Java BDD framework I'm comfortable with.
 
 Functionalities:
 BDD, Cucumber, Jenkins, Selenium, logging, pretty reports, chrome-firefox support, parallel execution, Java enum, json payloads, POJO [soon-ish].
