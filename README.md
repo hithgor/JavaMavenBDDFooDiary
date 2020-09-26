@@ -9,5 +9,5 @@ Scenarios are testing FooDiary from this github.<br>
 Get to \MealcardsTestAPI folder; <br>
 In your terminal run command: java -jar jenkins.war <br>
 In your browser go to: http://127.0.0.1:8080 <br>
-login with credentials: hithgor1 /// 1234 <br>
+Login with credentials: hithgor1 /// 1234 <br>
 The rest is just your basic bread-and-butter jenkins clickaround.
