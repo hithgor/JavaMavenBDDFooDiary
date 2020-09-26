@@ -13,5 +13,5 @@ Login with credentials: hithgor1 /// 1234 <br>
 The rest is just your basic bread-and-butter jenkins clickaround.
 <br>
 <br>
-# Example report generated from those tests
+Example report generated from those tests:
 ![alt text](http://hithgor.usermd.net/exampleCucumberReport.jpg)
