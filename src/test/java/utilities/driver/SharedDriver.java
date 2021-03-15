@@ -17,6 +17,7 @@ public class SharedDriver {
             switch (browser) {
                 case "chrome":
                     System.setProperty("webdriver.chrome.driver", "D:\\chromedriver.exe");
+                    System.setProperty("webdriver.chrome.whitelistedIps", "");
                     ChromeOptions chromeHeadlessConfig = new ChromeOptions();
                     chromeHeadlessConfig.addArguments("headless");
                     driver = new ChromeDriver(chromeHeadlessConfig);

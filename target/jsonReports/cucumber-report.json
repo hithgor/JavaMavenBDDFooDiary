@@ -3,15 +3,15 @@
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2020-06-10T14:41:12.319Z",
+        "start_timestamp": "2021-03-15T14:21:52.670Z",
         "before": [
           {
             "result": {
-              "duration": 2999500,
+              "duration": 1999500,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -22,11 +22,11 @@
         "after": [
           {
             "result": {
-              "duration": 1093999000,
+              "duration": 16997200,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -35,7 +35,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5435945200,
+              "duration": 33743026000,
               "status": "passed"
             },
             "line": 8,
@@ -53,7 +53,7 @@
           },
           {
             "result": {
-              "duration": 903003400,
+              "duration": 554255000,
               "status": "passed"
             },
             "line": 9,
@@ -65,7 +65,7 @@
           },
           {
             "result": {
-              "duration": 1952001300,
+              "duration": 1296904600,
               "status": "passed"
             },
             "line": 10,
@@ -91,7 +91,7 @@
           },
           {
             "result": {
-              "duration": 215994400,
+              "duration": 37000500,
               "status": "passed"
             },
             "line": 11,
@@ -109,7 +109,7 @@
           },
           {
             "result": {
-              "duration": 1608000800,
+              "duration": 1599163600,
               "status": "passed"
             },
             "line": 12,
@@ -128,19 +128,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:41:23.551Z",
+        "start_timestamp": "2021-03-15T14:22:30.001Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -151,11 +151,11 @@
         "after": [
           {
             "result": {
-              "duration": 851999500,
+              "duration": 15996300,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -164,7 +164,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3812987300,
+              "duration": 1856796300,
               "status": "passed"
             },
             "line": 8,
@@ -182,7 +182,7 @@
           },
           {
             "result": {
-              "duration": 845994000,
+              "duration": 499707900,
               "status": "passed"
             },
             "line": 9,
@@ -194,7 +194,7 @@
           },
           {
             "result": {
-              "duration": 1925023300,
+              "duration": 1249425900,
               "status": "passed"
             },
             "line": 10,
@@ -220,7 +220,7 @@
           },
           {
             "result": {
-              "duration": 222996400,
+              "duration": 31999900,
               "status": "passed"
             },
             "line": 11,
@@ -238,7 +238,7 @@
           },
           {
             "result": {
-              "duration": 1572556800,
+              "duration": 1586451900,
               "status": "passed"
             },
             "line": 12,
@@ -257,19 +257,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:41:32.787Z",
+        "start_timestamp": "2021-03-15T14:22:35.250Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -280,11 +280,11 @@
         "after": [
           {
             "result": {
-              "duration": 777998900,
+              "duration": 16000100,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -293,7 +293,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3037443200,
+              "duration": 1861657300,
               "status": "passed"
             },
             "line": 8,
@@ -311,7 +311,7 @@
           },
           {
             "result": {
-              "duration": 821001000,
+              "duration": 502926700,
               "status": "passed"
             },
             "line": 9,
@@ -323,7 +323,7 @@
           },
           {
             "result": {
-              "duration": 1946839200,
+              "duration": 1265316200,
               "status": "passed"
             },
             "line": 10,
@@ -349,7 +349,7 @@
           },
           {
             "result": {
-              "duration": 216084800,
+              "duration": 32999400,
               "status": "passed"
             },
             "line": 11,
@@ -367,7 +367,7 @@
           },
           {
             "result": {
-              "duration": 1558919600,
+              "duration": 1562685000,
               "status": "passed"
             },
             "line": 12,
@@ -386,19 +386,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:41:41.149Z",
+        "start_timestamp": "2021-03-15T14:22:40.497Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -409,11 +409,11 @@
         "after": [
           {
             "result": {
-              "duration": 882123700,
+              "duration": 14998400,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -422,7 +422,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3074722100,
+              "duration": 1829869000,
               "status": "passed"
             },
             "line": 23,
@@ -440,7 +440,7 @@
           },
           {
             "result": {
-              "duration": 908981400,
+              "duration": 643600200,
               "status": "passed"
             },
             "line": 24,
@@ -452,7 +452,7 @@
           },
           {
             "result": {
-              "duration": 1941909600,
+              "duration": 1253503300,
               "status": "passed"
             },
             "line": 25,
@@ -478,7 +478,7 @@
           },
           {
             "result": {
-              "duration": 224158900,
+              "duration": 34502300,
               "status": "passed"
             },
             "line": 26,
@@ -496,7 +496,7 @@
           },
           {
             "result": {
-              "duration": 1565291400,
+              "duration": 1568307900,
               "status": "passed"
             },
             "line": 27,
@@ -514,7 +514,7 @@
           },
           {
             "result": {
-              "duration": 218058300,
+              "duration": 37998700,
               "status": "passed"
             },
             "line": 28,
@@ -532,7 +532,7 @@
           },
           {
             "result": {
-              "duration": 1558114800,
+              "duration": 1579546900,
               "status": "passed"
             },
             "line": 29,
@@ -550,7 +550,7 @@
           },
           {
             "result": {
-              "duration": 224209500,
+              "duration": 37998500,
               "status": "passed"
             },
             "line": 30,
@@ -568,7 +568,7 @@
           },
           {
             "result": {
-              "duration": 1583352400,
+              "duration": 1556451100,
               "status": "passed"
             },
             "line": 31,
@@ -587,19 +587,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:41:53.334Z",
+        "start_timestamp": "2021-03-15T14:22:49.060Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -610,11 +610,11 @@
         "after": [
           {
             "result": {
-              "duration": 773996300,
+              "duration": 16004900,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -623,7 +623,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3105913700,
+              "duration": 3384205400,
               "status": "passed"
             },
             "line": 42,
@@ -641,7 +641,7 @@
           },
           {
             "result": {
-              "duration": 805995800,
+              "duration": 654360000,
               "status": "passed"
             },
             "line": 43,
@@ -653,7 +653,7 @@
           },
           {
             "result": {
-              "duration": 1941126800,
+              "duration": 1285717900,
               "status": "passed"
             },
             "line": 44,
@@ -679,7 +679,7 @@
           },
           {
             "result": {
-              "duration": 223306400,
+              "duration": 36001000,
               "status": "passed"
             },
             "line": 45,
@@ -697,7 +697,7 @@
           },
           {
             "result": {
-              "duration": 1554486500,
+              "duration": 1595931200,
               "status": "passed"
             },
             "line": 46,
@@ -715,7 +715,7 @@
           },
           {
             "result": {
-              "duration": 490949700,
+              "duration": 134999100,
               "status": "passed"
             },
             "line": 47,
@@ -727,7 +727,7 @@
           },
           {
             "result": {
-              "duration": 1630231600,
+              "duration": 1564345700,
               "status": "passed"
             },
             "line": 48,
@@ -746,19 +746,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:42:03.867Z",
+        "start_timestamp": "2021-03-15T14:22:57.737Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -769,11 +769,11 @@
         "after": [
           {
             "result": {
-              "duration": 778045900,
+              "duration": 18000000,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -782,7 +782,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3099327600,
+              "duration": 3444314700,
               "status": "passed"
             },
             "line": 57,
@@ -800,7 +800,7 @@
           },
           {
             "result": {
-              "duration": 813073800,
+              "duration": 608113800,
               "status": "passed"
             },
             "line": 58,
@@ -812,7 +812,7 @@
           },
           {
             "result": {
-              "duration": 1945727000,
+              "duration": 1261090600,
               "status": "passed"
             },
             "line": 59,
@@ -838,7 +838,7 @@
           },
           {
             "result": {
-              "duration": 217414000,
+              "duration": 31998700,
               "status": "passed"
             },
             "line": 60,
@@ -856,7 +856,7 @@
           },
           {
             "result": {
-              "duration": 1568030700,
+              "duration": 1570418200,
               "status": "passed"
             },
             "line": 61,
@@ -874,7 +874,7 @@
           },
           {
             "result": {
-              "duration": 4797942000,
+              "duration": 3848689700,
               "status": "passed"
             },
             "line": 64,
@@ -896,7 +896,7 @@
           },
           {
             "result": {
-              "duration": 46996400,
+              "duration": 28998300,
               "status": "passed"
             },
             "line": 65,
@@ -919,19 +919,20 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:42:17.137Z",
+        "start_timestamp": "2021-03-15T14:23:08.556Z",
         "before": [
           {
             "result": {
+              "duration": 999300,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -942,11 +943,11 @@
         "after": [
           {
             "result": {
-              "duration": 888478000,
+              "duration": 18000800,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -955,7 +956,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3096492400,
+              "duration": 1819663500,
               "status": "passed"
             },
             "line": 74,
@@ -973,7 +974,7 @@
           },
           {
             "result": {
-              "duration": 830165400,
+              "duration": 495687300,
               "status": "passed"
             },
             "line": 75,
@@ -985,7 +986,7 @@
           },
           {
             "result": {
-              "duration": 1965980900,
+              "duration": 1258215700,
               "status": "passed"
             },
             "line": 76,
@@ -1011,7 +1012,7 @@
           },
           {
             "result": {
-              "duration": 213003400,
+              "duration": 34003500,
               "status": "passed"
             },
             "line": 77,
@@ -1029,7 +1030,7 @@
           },
           {
             "result": {
-              "duration": 1562322300,
+              "duration": 1554299200,
               "status": "passed"
             },
             "line": 78,
@@ -1047,15 +1048,16 @@
           },
           {
             "result": {
-              "duration": 223030500,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//span[@id\u003d\u002795503801-Eggs, Grade A, Large, egg white\u0027]\"}\n  (Session info: headless chrome\u003d89.0.4389.82)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.0.0-alpha-5\u0027, revision: \u0027b3a0d621cc\u0027\nSystem info: host: \u0027DESKTOP-KVHF9QD\u0027, ip: \u0027172.21.48.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.7\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\\Users\\hithg\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63560}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: b9532b618d35cd0e1d85ace149394833\n*** Element info: {Using\u003dxpath, value\u003d//span[@id\u003d\u002795503801-Eggs, Grade A, Large, egg white\u0027]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:394)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)\r\n\tat bddSteps.StepDefinition.userClicksOnElement(StepDefinition.java:163)\r\n\tat ✽.User clicks on element XPATH \"//span[@id\u003d\u002795503801-Eggs, Grade A, Large, egg white\u0027]\"(file:///C:/Users/hithg/Desktop/pythonlearning/JavaLearning/restassured%20course/MealcardsTestAPI/src/test/java/features/selenium/chrome/mealcardsSelenium.feature:82)\r\n",
+              "duration": 2030426800,
+              "status": "failed"
             },
             "line": 82,
-            "name": "User clicks on element XPATH \"//span[@id\u003d\u00272539190-Eggs, Grade A, Large, egg white\u0027]\"",
+            "name": "User clicks on element XPATH \"//span[@id\u003d\u002795503801-Eggs, Grade A, Large, egg white\u0027]\"",
             "match": {
               "arguments": [
                 {
-                  "val": "\"//span[@id\u003d\u00272539190-Eggs, Grade A, Large, egg white\u0027]\"",
+                  "val": "\"//span[@id\u003d\u002795503801-Eggs, Grade A, Large, egg white\u0027]\"",
                   "offset": 29
                 }
               ],
@@ -1065,8 +1067,7 @@
           },
           {
             "result": {
-              "duration": 25996200,
-              "status": "passed"
+              "status": "skipped"
             },
             "line": 83,
             "name": "Ingredient \"Eggs, Grade A, Large, egg white\" is not present in mealcard number 0",
@@ -1088,19 +1089,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:42:25.950Z",
+        "start_timestamp": "2021-03-15T14:23:15.785Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -1111,11 +1112,11 @@
         "after": [
           {
             "result": {
-              "duration": 875997200,
+              "duration": 17999800,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -1124,7 +1125,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3572862400,
+              "duration": 1890515700,
               "status": "passed"
             },
             "line": 93,
@@ -1142,7 +1143,7 @@
           },
           {
             "result": {
-              "duration": 886575100,
+              "duration": 494229700,
               "status": "passed"
             },
             "line": 94,
@@ -1154,7 +1155,7 @@
           },
           {
             "result": {
-              "duration": 1935682000,
+              "duration": 1252044800,
               "status": "passed"
             },
             "line": 95,
@@ -1180,7 +1181,7 @@
           },
           {
             "result": {
-              "duration": 223985600,
+              "duration": 32002000,
               "status": "passed"
             },
             "line": 96,
@@ -1198,7 +1199,7 @@
           },
           {
             "result": {
-              "duration": 1548058500,
+              "duration": 1566958300,
               "status": "passed"
             },
             "line": 97,
@@ -1216,7 +1217,7 @@
           },
           {
             "result": {
-              "duration": 2079287800,
+              "duration": 102605300,
               "status": "passed"
             },
             "line": 99,
@@ -1229,19 +1230,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:42:37.078Z",
+        "start_timestamp": "2021-03-15T14:23:21.145Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -1252,11 +1253,11 @@
         "after": [
           {
             "result": {
-              "duration": 733998500,
+              "duration": 16706100,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -1265,7 +1266,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3091523900,
+              "duration": 3357929700,
               "status": "passed"
             },
             "line": 93,
@@ -1283,7 +1284,7 @@
           },
           {
             "result": {
-              "duration": 846918100,
+              "duration": 605455900,
               "status": "passed"
             },
             "line": 94,
@@ -1295,7 +1296,7 @@
           },
           {
             "result": {
-              "duration": 1970029400,
+              "duration": 1250509300,
               "status": "passed"
             },
             "line": 95,
@@ -1321,7 +1322,7 @@
           },
           {
             "result": {
-              "duration": 221993300,
+              "duration": 34998200,
               "status": "passed"
             },
             "line": 96,
@@ -1339,7 +1340,7 @@
           },
           {
             "result": {
-              "duration": 1609135500,
+              "duration": 1585073900,
               "status": "passed"
             },
             "line": 97,
@@ -1357,7 +1358,7 @@
           },
           {
             "result": {
-              "duration": 74998400,
+              "duration": 2195643600,
               "status": "passed"
             },
             "line": 99,
@@ -1370,7 +1371,7 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       }
@@ -1379,22 +1380,21 @@
     "description": "",
     "id": "manipulating-mealcards-at-dom-level",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/selenium/firefox/mealcardsSelenium.feature",
+    "uri": "file:src/test/java/features/selenium/chrome/mealcardsSelenium.feature",
     "tags": []
   },
   {
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2020-06-10T14:41:12.319Z",
+        "start_timestamp": "2021-03-15T14:23:30.196Z",
         "before": [
           {
             "result": {
-              "duration": 2999500,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -1405,11 +1405,11 @@
         "after": [
           {
             "result": {
-              "duration": 1019002700,
+              "duration": 17001300,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -1418,7 +1418,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5838944800,
+              "duration": 1840500900,
               "status": "passed"
             },
             "line": 8,
@@ -1436,7 +1436,7 @@
           },
           {
             "result": {
-              "duration": 991998200,
+              "duration": 505223300,
               "status": "passed"
             },
             "line": 9,
@@ -1448,7 +1448,7 @@
           },
           {
             "result": {
-              "duration": 2012001400,
+              "duration": 2008350200,
               "status": "passed"
             },
             "line": 10,
@@ -1466,7 +1466,7 @@
           },
           {
             "result": {
-              "duration": 222999700,
+              "duration": 35001600,
               "status": "passed"
             },
             "line": 11,
@@ -1484,8 +1484,9 @@
           },
           {
             "result": {
-              "duration": 335000400,
-              "status": "passed"
+              "error_message": "org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {\"method\":\"xpath\",\"selector\":\"//div[@class\u003d\u0027svg-container\u0027]\"}\n  (Session info: headless chrome\u003d89.0.4389.82)\nFor documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element\nBuild info: version: \u00274.0.0-alpha-5\u0027, revision: \u0027b3a0d621cc\u0027\nSystem info: host: \u0027DESKTOP-KVHF9QD\u0027, ip: \u0027172.21.48.1\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.7\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 89.0.4389.82, chrome: {chromedriverVersion: 89.0.4389.23 (61b08ee2c5002..., userDataDir: C:\\Users\\hithg\\AppData\\Loca...}, goog:chromeOptions: {debuggerAddress: localhost:63639}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: 4280b7664a622b1a8592c82d4ae46bbb\n*** Element info: {Using\u003dxpath, value\u003d//div[@class\u003d\u0027svg-container\u0027]}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:196)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:129)\r\n\tat org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:53)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:161)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:582)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:333)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:451)\r\n\tat org.openqa.selenium.By$ByXPath.findElement(By.java:394)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:325)\r\n\tat bddSteps.StepDefinition.elementWithXPATHIsDisplayed(StepDefinition.java:185)\r\n\tat ✽.Element with xpath \"//div[@class\u003d\u0027svg-container\u0027]\" is displayed(file:///C:/Users/hithg/Desktop/pythonlearning/JavaLearning/restassured%20course/MealcardsTestAPI/src/test/java/features/selenium/chrome/plottingSelenium.feature:12)\r\n",
+              "duration": 2032023200,
+              "status": "failed"
             },
             "line": 12,
             "name": "Element with xpath \"//div[@class\u003d\u0027svg-container\u0027]\" is displayed",
@@ -1503,19 +1504,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:41:22.763Z",
+        "start_timestamp": "2021-03-15T14:23:36.643Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -1526,11 +1527,11 @@
         "after": [
           {
             "result": {
-              "duration": 892998400,
+              "duration": 19001300,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -1539,7 +1540,7 @@
         "steps": [
           {
             "result": {
-              "duration": 4031999800,
+              "duration": 1800517300,
               "status": "passed"
             },
             "line": 17,
@@ -1557,7 +1558,7 @@
           },
           {
             "result": {
-              "duration": 2005998100,
+              "duration": 2004468900,
               "status": "passed"
             },
             "line": 18,
@@ -1575,7 +1576,7 @@
           },
           {
             "result": {
-              "duration": 2009578200,
+              "duration": 2013515900,
               "status": "passed"
             },
             "line": 19,
@@ -1594,7 +1595,7 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       }
@@ -1603,22 +1604,21 @@
     "description": "",
     "id": "user-stats-plot",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/selenium/firefox/plottingSelenium.feature",
+    "uri": "file:src/test/java/features/selenium/chrome/plottingSelenium.feature",
     "tags": []
   },
   {
     "line": 4,
     "elements": [
       {
-        "start_timestamp": "2020-06-10T14:41:12.319Z",
+        "start_timestamp": "2021-03-15T14:23:42.486Z",
         "before": [
           {
             "result": {
-              "duration": 2999500,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -1629,11 +1629,11 @@
         "after": [
           {
             "result": {
-              "duration": 988998100,
+              "duration": 15003500,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -1642,7 +1642,7 @@
         "steps": [
           {
             "result": {
-              "duration": 5420944800,
+              "duration": 1846884000,
               "status": "passed"
             },
             "line": 9,
@@ -1660,7 +1660,7 @@
           },
           {
             "result": {
-              "duration": 232998400,
+              "duration": 41998800,
               "status": "passed"
             },
             "line": 10,
@@ -1678,7 +1678,7 @@
           },
           {
             "result": {
-              "duration": 38003400,
+              "duration": 26000700,
               "status": "passed"
             },
             "line": 11,
@@ -1691,19 +1691,20 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:41:19.026Z",
+        "start_timestamp": "2021-03-15T14:23:44.421Z",
         "before": [
           {
             "result": {
+              "duration": 998300,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -1714,11 +1715,11 @@
         "after": [
           {
             "result": {
-              "duration": 903998100,
+              "duration": 16001900,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -1727,7 +1728,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3170002100,
+              "duration": 3366609600,
               "status": "passed"
             },
             "line": 16,
@@ -1745,7 +1746,7 @@
           },
           {
             "result": {
-              "duration": 226996700,
+              "duration": 35998000,
               "status": "passed"
             },
             "line": 17,
@@ -1763,7 +1764,7 @@
           },
           {
             "result": {
-              "duration": 845999100,
+              "duration": 458423900,
               "status": "passed"
             },
             "line": 18,
@@ -1775,7 +1776,7 @@
           },
           {
             "result": {
-              "duration": 23002400,
+              "duration": 21996900,
               "status": "passed"
             },
             "line": 19,
@@ -1794,19 +1795,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:41:24.201Z",
+        "start_timestamp": "2021-03-15T14:23:48.324Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -1817,11 +1818,11 @@
         "after": [
           {
             "result": {
-              "duration": 768017200,
+              "duration": 16003300,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -1830,7 +1831,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3904002000,
+              "duration": 1786548600,
               "status": "passed"
             },
             "line": 24,
@@ -1848,7 +1849,7 @@
           },
           {
             "result": {
-              "duration": 847999500,
+              "duration": 504260900,
               "status": "passed"
             },
             "line": 25,
@@ -1860,7 +1861,7 @@
           },
           {
             "result": {
-              "duration": 29003500,
+              "duration": 137998900,
               "status": "passed"
             },
             "line": 26,
@@ -1878,7 +1879,7 @@
           },
           {
             "result": {
-              "duration": 155994300,
+              "duration": 28999800,
               "status": "passed"
             },
             "line": 27,
@@ -1900,7 +1901,7 @@
           },
           {
             "result": {
-              "duration": 337001800,
+              "duration": 13999700,
               "status": "passed"
             },
             "line": 28,
@@ -1919,19 +1920,19 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       },
       {
-        "start_timestamp": "2020-06-10T14:41:30.247Z",
+        "start_timestamp": "2021-03-15T14:23:50.815Z",
         "before": [
           {
             "result": {
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumSetUpFirefox()"
+              "location": "bddSteps.Hooks.seleniumSetUp()"
             }
           }
         ],
@@ -1942,11 +1943,11 @@
         "after": [
           {
             "result": {
-              "duration": 759000000,
+              "duration": 17000700,
               "status": "passed"
             },
             "match": {
-              "location": "bddSteps.Hooks.seleniumTearDownFirefox()"
+              "location": "bddSteps.Hooks.seleniumTearDown()"
             }
           }
         ],
@@ -1955,7 +1956,7 @@
         "steps": [
           {
             "result": {
-              "duration": 3551677700,
+              "duration": 1785611200,
               "status": "passed"
             },
             "line": 33,
@@ -1973,7 +1974,7 @@
           },
           {
             "result": {
-              "duration": 2011326100,
+              "duration": 2023719800,
               "status": "passed"
             },
             "line": 34,
@@ -1992,7 +1993,7 @@
         ],
         "tags": [
           {
-            "name": "@SeleniumSetUpFirefox"
+            "name": "@SeleniumSetUp"
           }
         ]
       }
@@ -2001,7 +2002,7 @@
     "description": "",
     "id": "userlogin",
     "keyword": "Feature",
-    "uri": "file:src/test/java/features/selenium/firefox/userLoginSelenium.feature",
+    "uri": "file:src/test/java/features/selenium/chrome/userLoginSelenium.feature",
     "tags": []
   }
 ]

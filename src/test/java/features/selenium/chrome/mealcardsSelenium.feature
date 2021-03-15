@@ -79,7 +79,7 @@ Feature: Manipulating mealcards at DOM level
 
     #This works only because removing is broken in source code - clicking on ingredient will
     # remove all ingredients named same as a clicked one from given mealcard
-    When User clicks on element XPATH "//span[@id='2539190-Eggs, Grade A, Large, egg white']"
+    When User clicks on element XPATH "//span[@id='95503801-Eggs, Grade A, Large, egg white']"
     Then Ingredient "Eggs, Grade A, Large, egg white" is not present in mealcard number 0
 
 
