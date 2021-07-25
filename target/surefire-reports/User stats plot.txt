@@ -1,4 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: User stats plot
 -------------------------------------------------------------------------------
-Tests run: 2, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 19.602 s - in User stats plot
+Tests run: 2, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 23.232 s <<< FAILURE! - in User stats plot
+User stats plot.User logs in and checks his consumption plot  Time elapsed: 13.602 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //div[@class='svg-container']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
+System info: host: 'DESKTOP-KVHF9QD', ip: '172.24.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: true, moz:processID: 7308, moz:profile: C:\Users\hithg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: b714e7ca-c4fb-4620-8233-cc95f14f9076
+*** Element info: {Using=xpath, value=//div[@class='svg-container']}
+

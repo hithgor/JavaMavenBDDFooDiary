@@ -1,4 +1,23 @@
 -------------------------------------------------------------------------------
 Test set: Manipulating mealcards at DOM level
 -------------------------------------------------------------------------------
-Tests run: 9, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 93.526 s - in Manipulating mealcards at DOM level
+Tests run: 9, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 104.718 s <<< FAILURE! - in Manipulating mealcards at DOM level
+Manipulating mealcards at DOM level.User chooses ingredients and adds them to lunch mealcard  Time elapsed: 15.085 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Cannot locate option with index: 0
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
+System info: host: 'DESKTOP-KVHF9QD', ip: '172.24.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: driver.version: unknown
+
+Manipulating mealcards at DOM level.User removes ingredient from a mealcard  Time elapsed: 11.38 s  <<< ERROR!
+org.openqa.selenium.NoSuchElementException: 
+Unable to locate element: //span[@id='2539190-Eggs, Grade A, Large, egg white']
+For documentation on this error, please visit: https://selenium.dev/exceptions/#no_such_element
+Build info: version: '4.0.0-alpha-5', revision: 'b3a0d621cc'
+System info: host: 'DESKTOP-KVHF9QD', ip: '172.24.48.1', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.7'
+Driver info: org.openqa.selenium.firefox.FirefoxDriver
+Capabilities {acceptInsecureCerts: true, browserName: firefox, browserVersion: 72.0.2, javascriptEnabled: true, moz:accessibilityChecks: false, moz:buildID: 20200117190643, moz:geckodriverVersion: 0.26.0, moz:headless: true, moz:processID: 4408, moz:profile: C:\Users\hithg\AppData\Loca..., moz:shutdownTimeout: 60000, moz:useNonSpecCompliantPointerOrigin: false, moz:webdriverClick: true, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, platformVersion: 10.0, rotatable: false, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify}
+Session ID: 3f52b71a-5e6a-41c4-9155-15a60c47aed9
+*** Element info: {Using=xpath, value=//span[@id='2539190-Eggs, Grade A, Large, egg white']}
+
